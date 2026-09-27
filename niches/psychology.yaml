@@ -1,0 +1,62 @@
+# Niche Intelligence Profile: Human Psychology & Mind Games
+name: psychology
+display_name: "Psychology & Mind Games"
+rpm_tier: "High ($4.00 - $8.00)"
+
+script:
+  tone: "mysterious, analytical, unsettling, deeply personal"
+  pacing: "deliberate, intense, rapid psychological revelations"
+  hooks:
+    - pattern: "curiosity_gap"
+      template: "Your brain is hiding {topic} from you right now."
+    - pattern: "dark_psychology"
+      template: "Psychologists call this the darkest trick people use to control you."
+    - pattern: "counter_intuitive"
+      template: "Why intelligent people constantly fall for {topic}."
+    - pattern: "personal_callout"
+      template: "If you ever do this one thing, your subconscious is revealing a secret."
+  cta_variants:
+    - "Follow if you want to master human psychology."
+    - "Drop a comment: have you noticed people doing this?"
+    - "Subscribe to unlock your subconscious mind."
+  word_count: "120 to 140"
+  forbidden:
+    - "welcome back guys"
+    - "like and share"
+    - "today I want to discuss"
+    - "did you know"
+
+visuals:
+  style: "dark cinematic, chiaroscuro lighting, subtle slow motion, shadow aesthetics"
+  mood: "intense, cerebral, thought-provoking"
+  subjects:
+    - "dramatic human silhouette in shadow"
+    - "human brain glowing neural synapses"
+    - "deep eye iris extreme macro zoom"
+    - "lonely figure walking in mist"
+    - "chess pieces on dark reflective table"
+  avoid:
+    - "happy business people high fiving"
+    - "cartoon clip art"
+    - "bright daylight office meetings"
+
+voice:
+  pace: "+5%"
+  energy: "intimate, whispering authority, hypnotic"
+  suggested_voices:
+    edge_tts: "en-US-ChristopherNeural"
+
+captions:
+  highlight_color: "&H0000FFFF&"  # Golden Yellow in BGR hex
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "dark ambient suspense, subtle sub-bass pulse, no lyrics"
+  energy: "medium"
+
+discovery:
+  reddit: ["psychology", "todayilearned", "neuroscience", "socialengineering"]
+  hackernews: false
+  google_trends_category: "s"

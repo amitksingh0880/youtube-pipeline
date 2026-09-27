@@ -1,0 +1,59 @@
+# Niche Intelligence Profile: Mind-Blowing Paradoxes & World Secrets
+name: general
+display_name: "World Paradoxes & Wild Facts"
+rpm_tier: "Medium ($2.50 - $5.00)"
+
+script:
+  tone: "mind-bending, conversational, fast-paced, humorous"
+  pacing: "rapid-fire, surprising twist every 6 seconds"
+  hooks:
+    - pattern: "mind_bender"
+      template: "Cleopatra lived closer in time to the iPhone than to the building of the Pyramids."
+    - pattern: "impossible_fact"
+      template: "There are more trees on Earth than stars in the Milky Way galaxy."
+    - pattern: "paradox"
+      template: "The moment you realize {topic}, your entire worldview shifts."
+  cta_variants:
+    - "Subscribe for daily mind-bending facts."
+    - "Did you already know this? Let me know below!"
+    - "Share this with a friend who loves crazy facts."
+  word_count: "120 to 140"
+  forbidden:
+    - "hey guys"
+    - "welcome back"
+    - "like and subscribe"
+
+visuals:
+  style: "vibrant high-contrast 4K imagery, surreal perspectives, dynamic macro shifts"
+  mood: "curious, electric, wondrous"
+  subjects:
+    - "ancient pyramid aligned with stars"
+    - "time-lapse spinning globe from orbit"
+    - "vintage hourglass sand falling macro"
+    - "golden ratio spiral in nature"
+    - "microscopic water droplet reflecting world"
+  avoid:
+    - "boring text slides"
+    - "clip art"
+    - "static blurry screenshots"
+
+voice:
+  pace: "+8%"
+  energy: "dynamic, excited, clear, storytelling"
+  suggested_voices:
+    edge_tts: "en-US-GuyNeural"
+
+captions:
+  highlight_color: "&H0000FFFF&"  # Golden Yellow in BGR hex
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "upbeat cinematic groove, mysterious synth pads"
+  energy: "medium-high"
+
+discovery:
+  reddit: ["todayilearned", "damnthatsinteresting", "mildlyinteresting", "explainlikeimfive"]
+  hackernews: false
+  google_trends_category: "all"

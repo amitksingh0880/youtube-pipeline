@@ -1,0 +1,59 @@
+# Niche Intelligence Profile: Biohacking & Longevity Science
+name: fitness_longevity
+display_name: "Biohacking & Longevity Secrets"
+rpm_tier: "Very High ($5.00 - $11.00)"
+
+script:
+  tone: "cutting-edge, biological, actionable, urgent"
+  pacing: "rapid-fire protocols, biochemical mechanisms simplified"
+  hooks:
+    - pattern: "protocol_reveal"
+      template: "Neuroscientists found doing {topic} for two minutes reverses brain aging."
+    - pattern: "debunking_myth"
+      template: "Everything you were told about {topic} is completely ruining your sleep."
+    - pattern: "hormone_hack"
+      template: "This simple morning habit spikes dopamine for eight hours straight."
+  cta_variants:
+    - "Follow for science-backed longevity protocols."
+    - "Will you try this protocol tomorrow morning? Comment below."
+    - "Subscribe for weekly peak performance breakdowns."
+  word_count: "125 to 140"
+  forbidden:
+    - "what's up gym bros"
+    - "smash the like button"
+    - "welcome back fitness fam"
+
+visuals:
+  style: "hyper-clean clinical aesthetic, bio-lab microscopes, athletic anatomy, cold plunge aesthetics"
+  mood: "vital, modern, scientific"
+  subjects:
+    - "athlete breathing heavily in cold vapor"
+    - "red light therapy glowing device"
+    - "cellular mitochondria microscopic 3D render"
+    - "heart rate monitor pulse waveform glowing"
+    - "fresh clean water droplets on athlete face"
+  avoid:
+    - "cheesy bodybuilding poses"
+    - "supplement bottle spam"
+    - "generic gym dumbbell racks"
+
+voice:
+  pace: "+8%"
+  energy: "athletic, articulate, motivated, direct"
+  suggested_voices:
+    edge_tts: "en-US-GuyNeural"
+
+captions:
+  highlight_color: "&H0000FF00&"  # Bio Green in BGR hex
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "driving minimal tech house, energetic pulse, no vocals"
+  energy: "high"
+
+discovery:
+  reddit: ["Biohackers", "longevity", "HubermanLab", "Supplements"]
+  hackernews: false
+  google_trends_category: "m"

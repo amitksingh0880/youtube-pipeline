@@ -1,0 +1,35 @@
+# ==============================================================================
+# Subtitle & Visual Styling Templates
+# ==============================================================================
+
+# Ssemble AI Clipping Templates (app.ssemble.com)
+ssemble_templates:
+  default: "hormozi1"
+  popular:
+    - id: "hormozi1"
+      name: "Alex Hormozi Style"
+      description: "Fast-popping, vibrant yellow active-word highlight with black stroke."
+    - id: "beast"
+      name: "MrBeast Style"
+      description: "Bold bouncy uppercase subtitles with high-contrast drop shadow."
+    - id: "clean"
+      name: "Minimalist Modern"
+      description: "Clean crisp white typography with subtle backdrop."
+    - id: "neon"
+      name: "Cyberpunk Neon"
+      description: "Glowing cyan and neon green highlights for tech and science."
+
+# Standalone Local Studio ASS Subtitle Styling (FFmpeg Engine)
+local_subtitles:
+  hormozi_style:
+    font_name: "Montserrat-Black"
+    font_size: 24
+    primary_color: "&H00FFFFFF"     # White inactive text (AABBGGRR in ASS)
+    highlight_color: "&H0000FFFF"   # Bright Yellow active word highlight
+    outline_color: "&H00000000"     # Deep Black border
+    outline_width: 3.5
+    shadow_width: 2.0
+    alignment: 2                    # Bottom-center
+    margin_v: 240                   # Vertical position (above YouTube UI buttons)
+    uppercase: true
+    max_words_per_screen: 4         # Rapid snappy 2-4 word phrases

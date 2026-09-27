@@ -1,0 +1,59 @@
+# Niche Intelligence Profile: Dark History & Paradoxes
+name: dark_history
+display_name: "Dark History & Unsolved Paradoxes"
+rpm_tier: "High ($3.00 - $6.50)"
+
+script:
+  tone: "suspenseful, storytelling, mysterious, investigative"
+  pacing: "cinematic build-up, punchy revelations, high intrigue"
+  hooks:
+    - pattern: "shocking_fact"
+      template: "In {year}, {institution} attempted an experiment so bizarre they classified it for decades."
+    - pattern: "untold_story"
+      template: "History books completely ignored the true reason {event} happened."
+    - pattern: "disturbing_coincidence"
+      template: "The odds of this happening are one in a billion, but in {year}, it actually did."
+  cta_variants:
+    - "Follow for the dark history they never taught in school."
+    - "Would you have survived this? Let me know below."
+    - "Subscribe for more declassified historical records."
+  word_count: "120 to 145"
+  forbidden:
+    - "did you know"
+    - "have you ever wondered"
+    - "smash like"
+    - "thanks for watching"
+
+visuals:
+  style: "cinematic, archival grain, moody shadow lighting, vintage documentary"
+  mood: "dark, mysterious, atmospheric"
+  subjects:
+    - "vintage trench coat in shadows"
+    - "classified document stamp"
+    - "vintage 1960s laboratory equipment"
+    - "foggy cobblestone street night"
+    - "archival surveillance photograph"
+  avoid:
+    - "cartoons"
+    - "bright cheerful colors"
+    - "modern smartphones"
+
+voice:
+  pace: "+5%"
+  energy: "deep, authoritative, calm, hypnotic"
+  suggested_voices:
+    edge_tts: "en-US-ChristopherNeural"
+
+captions:
+  highlight_color: "&H0000FFFF&"  # Golden Yellow in BGR hex
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "dark ambient strings, slow pulse, psychological tension"
+  energy: "medium"
+
+discovery:
+  reddit: ["todayilearned", "history", "UnresolvedMysteries", "ColdWar"]
+  google_trends_category: "e"

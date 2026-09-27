@@ -1,0 +1,69 @@
+# ==============================================================================
+# Profitable YouTube Shorts Niches Configuration
+# ==============================================================================
+
+niches:
+  - id: dark_history
+    name: "Dark History & Unsolved Paradoxes"
+    rpm_tier: "High"
+    default_voice: "en-US-ChristopherNeural"
+    voice_rate: "+5%"
+    weight: 4
+    description: "Cold War espionage, bizarre historical accidents, medieval mysteries, and forbidden knowledge."
+    seed_queries:
+      - "Cold War secret operations"
+      - "bizarre ancient engineering"
+      - "unsolved historical paradoxes"
+      - "strange historical coincidences"
+
+  - id: psychology
+    name: "Human Psychology & Mind Games"
+    rpm_tier: "High"
+    default_voice: "en-US-GuyNeural"
+    voice_rate: "+10%"
+    weight: 3
+    description: "Cognitive biases, body language cues, dark psychology facts, and subconscious behaviors."
+    seed_queries:
+      - "subconscious mind tricks"
+      - "why humans make irrational decisions"
+      - "dark psychology manipulation tactics"
+      - "strange psychological phenomena"
+
+  - id: space_science
+    name: "Cosmic Mysteries & Deep Space"
+    rpm_tier: "Medium-High"
+    default_voice: "en-US-ChristopherNeural"
+    voice_rate: "+5%"
+    weight: 3
+    description: "Mind-bending astrophysics, terrifying black holes, rogue planets, and Fermi paradox."
+    seed_queries:
+      - "terrifying cosmic discoveries"
+      - "what happens inside a black hole"
+      - "strange signals from deep space"
+      - "Voyager probe interstellar discoveries"
+
+  - id: wealth_finance
+    name: "Wealth Psychology & Money Secrets"
+    rpm_tier: "Very High"
+    default_voice: "en-US-GuyNeural"
+    voice_rate: "+8%"
+    weight: 3
+    description: "Unspoken rules of wealth, economic history, contrarian financial habits, and billionaire mindset."
+    seed_queries:
+      - "how the banking system actually works"
+      - "the psychology of conspicuous consumption"
+      - "counter-intuitive wealth building habits"
+      - "crazy economic bubbles in history"
+
+  - id: tech_ai
+    name: "Futuristic Tech & AI Breakthroughs"
+    rpm_tier: "High"
+    default_voice: "en-US-GuyNeural"
+    voice_rate: "+10%"
+    weight: 2
+    description: "Autonomous robotics, quantum computing leaps, covert surveillance tech, and future frontiers."
+    seed_queries:
+      - "quantum computing breakthroughs"
+      - "creepy humanoid robotics advances"
+      - "brain computer interface tests"
+      - "how surveillance algorithms track humans"

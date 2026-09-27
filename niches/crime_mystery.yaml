@@ -1,0 +1,59 @@
+# Niche Intelligence Profile: True Crime & Unsolved Mysteries
+name: crime_mystery
+display_name: "True Crime & Cold Cases"
+rpm_tier: "High ($4.50 - $9.00)"
+
+script:
+  tone: "suspenseful, forensic, investigative, gritty"
+  pacing: "fast, chilling clues, sudden shocking twists"
+  hooks:
+    - pattern: "crime_hook"
+      template: "Police searched the crime scene three times before looking under {topic}."
+    - pattern: "unsolved_case"
+      template: "Thirty years after the disappearance, a single phone call reopened the case."
+    - pattern: "forensic_breakthrough"
+      template: "DNA technology just cracked the most baffling unsolved mystery in history."
+  cta_variants:
+    - "Follow for the dark cases nobody talks about."
+    - "What is your theory on this case? Drop it below."
+    - "Subscribe for weekly forensic deep dives."
+  word_count: "130 to 145"
+  forbidden:
+    - "welcome back true crime fans"
+    - "like and subscribe"
+    - "don't forget to ring the bell"
+
+visuals:
+  style: "vintage crime scene noir, police tape, rainy night streets, micro-zoom evidence"
+  mood: "eerie, foreboding, atmospheric"
+  subjects:
+    - "yellow crime scene tape in rain"
+    - "police siren flashing red and blue at night"
+    - "fingerprint dust on dark glass macro"
+    - "vintage rotary phone ringing in empty room"
+    - "shadowy trench coat figure walking under streetlamp"
+  avoid:
+    - "gruesome explicit gore"
+    - "cheerful daytime scenes"
+    - "cheap halloween blood"
+
+voice:
+  pace: "+2%"
+  energy: "gravelly, somber, intense, narrative"
+  suggested_voices:
+    edge_tts: "en-US-ChristopherNeural"
+
+captions:
+  highlight_color: "&H000000FF&"  # Blood Red in BGR hex
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "dark investigative drone, eerie strings, heartbeat rhythm"
+  energy: "medium-high"
+
+discovery:
+  reddit: ["UnresolvedMysteries", "TrueCrime", "RBI", "ColdCases"]
+  hackernews: false
+  google_trends_category: "e"

@@ -1,0 +1,62 @@
+# Niche Intelligence Profile: Tech & AI News
+name: tech_ai
+display_name: "Tech & AI Breakthroughs"
+rpm_tier: "High ($3.50 - $7.00)"
+
+script:
+  tone: "informed, slightly contrarian, fast-paced, authoritative"
+  pacing: "rapid, dense with insights, zero fluff"
+  hooks:
+    - pattern: "contrarian_take"
+      template: "Everyone is celebrating {topic}. Here's why that's a mistake."
+    - pattern: "breaking_news"
+      template: "This tech breakthrough just dropped and almost nobody noticed."
+    - pattern: "prediction"
+      template: "{topic} changes the internet forever. Here is what happens next."
+    - pattern: "explainer"
+      template: "Let me break down {topic} in 45 seconds because most news outlets got it completely wrong."
+  cta_variants:
+    - "Subscribe for daily uncensored tech breakthroughs."
+    - "Drop a comment: do you trust this technology?"
+    - "Follow for the AI news nobody else covers."
+  word_count: "125 to 145"
+  forbidden:
+    - "like and subscribe"
+    - "smash that bell"
+    - "what is up guys"
+    - "welcome back to the channel"
+
+visuals:
+  style: "sleek, dark backgrounds, high-tech neon accents, sharp cinematography"
+  mood: "futuristic, intense, cutting-edge"
+  subjects:
+    - "glowing server racks"
+    - "robotic humanoid hands"
+    - "quantum computer chip macro"
+    - "neon digital data streams"
+    - "cyberpunk city night drone"
+  avoid:
+    - "people smiling at laptops"
+    - "clipart"
+    - "generic white offices"
+
+voice:
+  pace: "+10%"
+  energy: "confident, dynamic, sharp"
+  suggested_voices:
+    edge_tts: "en-US-GuyNeural"
+
+captions:
+  highlight_color: "&H0000FFFF&"  # Golden Yellow in BGR hex
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "ambient electronic, synthwave tension, no lyrics"
+  energy: "medium-high"
+
+discovery:
+  reddit: ["technology", "artificial", "MachineLearning", "singularity"]
+  hackernews: true
+  google_trends_category: "t"

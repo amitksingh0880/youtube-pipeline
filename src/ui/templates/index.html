@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Shorts Studio — Google Material 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --md-sys-color-primary: #1A73E8;
+      --md-sys-color-on-primary: #FFFFFF;
+      --md-sys-color-primary-container: #D2E3FC;
+      --md-sys-color-surface: #FFFFFF;
+      --md-sys-color-surface-dim: #F8F9FA;
+      --md-sys-color-surface-container: #F1F3F4;
+      --md-sys-color-on-surface: #202124;
+      --md-sys-color-on-surface-variant: #5F6368;
+      --md-sys-color-outline: #DADCE0;
+      --md-sys-color-outline-variant: #E8EAED;
+      --md-sys-color-success: #1E8E3E;
+      --md-sys-color-warning: #F9AB00;
+      --md-sys-color-error: #D93025;
+      --md-shape-corner-small: 8px;
+      --md-shape-corner-medium: 16px;
+      --md-shape-corner-large: 24px;
+      --md-shape-corner-full: 9999px;
+      --md-font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      --md-font-mono: 'Roboto Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--md-font-family);
+      background-color: var(--md-sys-color-surface-dim);
+      color: var(--md-sys-color-on-surface);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Google Top App Bar */
+    header.app-bar {
+      height: 64px;
+      background: var(--md-sys-color-surface);
+      border-bottom: 1px solid var(--md-sys-color-outline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      background: #FF0000;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+
+    .brand-title {
+      font-size: 19px;
+      font-weight: 500;
+      color: #202124;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-badge {
+      font-size: 11px;
+      font-weight: 500;
+      background: var(--md-sys-color-primary-container);
+      color: #174EA6;
+      padding: 2px 8px;
+      border-radius: var(--md-shape-corner-full);
+      letter-spacing: 0.5px;
+    }
+
+    .user-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .account-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--md-sys-color-surface-container);
+      border: 1px solid var(--md-sys-color-outline-variant);
+      padding: 4px 12px 4px 6px;
+      border-radius: var(--md-shape-corner-full);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .avatar-circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #1A73E8;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Sub-Header Navigation Tabs */
+    .tabs-bar {
+      background: var(--md-sys-color-surface);
+      border-bottom: 1px solid var(--md-sys-color-outline);
+      display: flex;
+      padding: 0 24px;
+      gap: 32px;
+    }
+
+    .tab-item {
+      padding: 14px 4px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface-variant);
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    .tab-item:hover { color: var(--md-sys-color-on-surface); }
+
+    .tab-item.active {
+      color: var(--md-sys-color-primary);
+    }
+
+    .tab-item.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--md-sys-color-primary);
+      border-radius: 3px 3px 0 0;
+    }
+
+    /* Main Container */
+    main.content-area {
+      max-width: 1400px;
+      margin: 24px auto;
+      padding: 0 24px;
+    }
+
+    /* Metric Cards Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .metric-card {
+      background: var(--md-sys-color-surface);
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: var(--md-shape-corner-medium);
+      padding: 20px;
+    }
+
+    .metric-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface-variant);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .metric-value {
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface);
+      margin-top: 6px;
+    }
+
+    .metric-sub {
+      font-size: 12px;
+      color: var(--md-sys-color-on-surface-variant);
+      margin-top: 4px;
+    }
+
+    /* Workspace 2-Column Layout */
+    .studio-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--md-sys-color-surface);
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: var(--md-shape-corner-medium);
+      padding: 24px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    /* Form Inputs */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label.field-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface-variant);
+      margin-bottom: 8px;
+    }
+
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .niche-chip {
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: var(--md-shape-corner-small);
+      background: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .niche-chip:hover {
+      background: var(--md-sys-color-surface-container);
+    }
+
+    .niche-chip.selected {
+      background: #E8F0FE;
+      border-color: #1A73E8;
+      color: #174EA6;
+      font-weight: 500;
+    }
+
+    .text-input {
+      width: 100%;
+      height: 44px;
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: var(--md-shape-corner-small);
+      padding: 0 14px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--md-sys-color-on-surface);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .text-input:focus {
+      border-color: var(--md-sys-color-primary);
+      box-shadow: 0 0 0 1px var(--md-sys-color-primary);
+    }
+
+    /* Mode Selection Cards */
+    .mode-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .mode-card {
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: var(--md-shape-corner-small);
+      padding: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .mode-card:hover { background: var(--md-sys-color-surface-container); }
+
+    .mode-card.selected {
+      border-color: #1A73E8;
+      background: #E8F0FE;
+    }
+
+    .mode-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: #202124;
+    }
+
+    .mode-desc {
+      font-size: 11px;
+      color: var(--md-sys-color-on-surface-variant);
+      margin-top: 4px;
+    }
+
+    /* Google Action Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      height: 40px;
+      padding: 0 20px;
+      border-radius: var(--md-shape-corner-full);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+    }
+
+    .btn-primary:hover {
+      background: #1557B0;
+      box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+    }
+
+    .btn-primary:disabled {
+      background: #DADCE0;
+      color: #9AA0A6;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .btn-outlined {
+      background: transparent;
+      border-color: var(--md-sys-color-outline);
+      color: var(--md-sys-color-primary);
+    }
+
+    .btn-outlined:hover {
+      background: #F1F3F4;
+    }
+
+    /* Progress Indicator */
+    .progress-box {
+      margin-top: 20px;
+      padding: 16px;
+      background: var(--md-sys-color-surface-container);
+      border-radius: var(--md-shape-corner-small);
+      display: none;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 4px;
+      background: #DADCE0;
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: var(--md-sys-color-primary);
+      transition: width 0.3s ease;
+    }
+
+    /* Right Preview Column (Phone Mockup) */
+    .preview-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone-mockup {
+      width: 320px;
+      height: 568px;
+      background: #000;
+      border-radius: 36px;
+      border: 8px solid #202124;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.2);
+    }
+
+    .phone-mockup video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .phone-empty {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #9AA0A6;
+      font-size: 13px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    /* Meta Details Accordion */
+    .meta-box {
+      width: 100%;
+      margin-top: 16px;
+      background: var(--md-sys-color-surface);
+      border: 1px solid var(--md-sys-color-outline);
+      border-radius: var(--md-shape-corner-small);
+      padding: 16px;
+    }
+
+    .meta-item {
+      margin-bottom: 12px;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--md-sys-color-on-surface-variant);
+      font-weight: 500;
+    }
+
+    .meta-value {
+      font-size: 13px;
+      color: var(--md-sys-color-on-surface);
+      margin-top: 2px;
+      font-family: var(--md-font-mono);
+      background: var(--md-sys-color-surface-container);
+      padding: 6px 10px;
+      border-radius: 4px;
+      word-break: break-all;
+    }
+
+    /* History Table */
+    .history-card {
+      margin-top: 24px;
+    }
+
+    table.m3-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    table.m3-table th {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--md-sys-color-outline);
+      color: var(--md-sys-color-on-surface-variant);
+      font-weight: 500;
+    }
+
+    table.m3-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--md-sys-color-outline-variant);
+      color: var(--md-sys-color-on-surface);
+    }
+
+    table.m3-table tr:hover td {
+      background: var(--md-sys-color-surface-dim);
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: var(--md-shape-corner-full);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .status-badge.uploaded { background: #E6F4EA; color: #137333; }
+    .status-badge.generated { background: #E8F0FE; color: #1A73E8; }
+    .status-badge.failed { background: #FCE8E6; color: #C5221F; }
+  </style>
+</head>
+<body>
+
+  <!-- Google App Bar -->
+  <header class="app-bar">
+    <div class="brand-section">
+      <div class="brand-logo">▶</div>
+      <div class="brand-title">
+        YouTube Shorts Studio
+        <span class="brand-badge">Gemini 2.0 Flash</span>
+      </div>
+    </div>
+    <div class="user-actions">
+      <div class="account-chip">
+        <div class="avatar-circle">A</div>
+        <span>Channel: @Creator</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="tabs-bar">
+    <div class="tab-item active" onclick="switchTab('create')">Studio Generator</div>
+    <div class="tab-item" onclick="switchTab('history')">Shorts Library</div>
+    <div class="tab-item" onclick="switchTab('settings')">Settings & Policy</div>
+  </nav>
+
+  <main class="content-area">
+
+    <!-- Metrics Row -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-title">Total Created</div>
+        <div class="metric-value" id="stat-total">0</div>
+        <div class="metric-sub">Across all configured niches</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Today's Uploads</div>
+        <div class="metric-value" id="stat-today">0 / 6</div>
+        <div class="metric-sub">YouTube Daily Safety Quota</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Voice Engine</div>
+        <div class="metric-value" style="font-size: 20px;">Edge-TTS</div>
+        <div class="metric-sub">Neural Broadcast Voice ($0)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Compliance Status</div>
+        <div class="metric-value" style="color: var(--md-sys-color-success); font-size: 20px;">2026 Aligned</div>
+        <div class="metric-sub">Altered Media tags active</div>
+      </div>
+    </div>
+
+    <!-- 2-Column Studio Layout -->
+    <div class="studio-layout" id="view-create">
+
+      <!-- Left Column: Controls -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Configure & Generate Short</div>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label">1. Select Target Niche</label>
+          <div class="chip-group" id="niche-chips">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label">2. Assembly Mode</label>
+          <div class="mode-cards">
+            <div class="mode-card selected" onclick="selectMode('local-studio', this)">
+              <div class="mode-name">Local Studio</div>
+              <div class="mode-desc">100% Local FFmpeg + Hormozi ASS captions. 0 credits.</div>
+            </div>
+            <div class="mode-card" onclick="selectMode('ssemble-ai', this)">
+              <div class="mode-name">Ssemble Cloud</div>
+              <div class="mode-desc">Hybrid tunnel into Ssemble AI clipping & templates.</div>
+            </div>
+            <div class="mode-card" onclick="selectMode('ssemble-clip', this)">
+              <div class="mode-name">Trend Clipper</div>
+              <div class="mode-desc">Direct viral URL clipping via Ssemble.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label">3. Topic Angle (Optional hint, or leave blank for auto-scout)</label>
+          <input type="text" id="topic-hint" class="text-input" placeholder="e.g. Project Acoustic Kitty Cold War secret cat spy">
+        </div>
+
+        <div class="form-group" style="display: flex; gap: 16px; align-items: center;">
+          <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+            <input type="checkbox" id="dry-run-check" checked>
+            Dry Run (Generate and preview locally without uploading to YouTube)
+          </label>
+        </div>
+
+        <button class="btn btn-primary" id="btn-generate" onclick="startGeneration()">
+          <span>▶</span>
+          <span>Generate YouTube Short</span>
+        </button>
+
+        <!-- Progress Box -->
+        <div class="progress-box" id="progress-box">
+          <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 500;">
+            <span id="progress-msg">Initializing...</span>
+            <span id="progress-pct">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 9:16 Video Player Mockup -->
+      <div class="preview-container">
+        <div class="phone-mockup">
+          <div class="phone-empty" id="preview-placeholder">
+            <div style="font-size: 40px; margin-bottom: 12px;">📱</div>
+            <strong>Ready for Generation</strong>
+            <p style="margin-top: 6px; font-size: 12px;">Your 1080x1920 Short preview with animated subtitles will play here.</p>
+          </div>
+          <video id="preview-video" controls style="display: none;"></video>
+        </div>
+
+        <div class="meta-box" id="meta-box" style="display: none;">
+          <div class="meta-item">
+            <div class="meta-label">Title</div>
+            <div class="meta-value" id="meta-title">-</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Spoken Hook (0-2s)</div>
+            <div class="meta-value" id="meta-hook">-</div>
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 14px;">
+            <button class="btn btn-primary" id="btn-upload-direct" onclick="uploadCurrentShort()" style="flex: 1;">
+              Upload to YouTube Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- History Tab View -->
+    <div class="card history-card" id="view-history" style="display: none;">
+      <div class="card-header">
+        <div class="card-title">Generated Shorts History</div>
+      </div>
+      <table class="m3-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Niche</th>
+            <th>Title</th>
+            <th>Mode</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="history-tbody">
+          <!-- Populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <script>
+    let currentNiche = 'dark_history';
+    let currentMode = 'local-studio';
+    let currentSessionId = null;
+
+    async function loadStats() {
+      try {
+        const res = await fetch('/api/stats');
+        const data = await res.json();
+        document.getElementById('stat-total').innerText = data.total_generated;
+        document.getElementById('stat-today').innerText = `${data.today_uploads} / ${data.daily_limit}`;
+      } catch(e) {}
+    }
+
+    async function loadNiches() {
+      try {
+        const res = await fetch('/api/niches');
+        const niches = await res.json();
+        const container = document.getElementById('niche-chips');
+        container.innerHTML = '';
+        niches.forEach((n, idx) => {
+          const chip = document.createElement('div');
+          chip.className = `niche-chip ${idx === 0 ? 'selected' : ''}`;
+          chip.innerText = n.name;
+          chip.onclick = () => {
+            document.querySelectorAll('.niche-chip').forEach(c => c.classList.remove('selected'));
+            chip.classList.add('selected');
+            currentNiche = n.id;
+          };
+          container.appendChild(chip);
+        });
+        if (niches.length > 0) currentNiche = niches[0].id;
+      } catch(e) {}
+    }
+
+    async function loadHistory() {
+      try {
+        const res = await fetch('/api/history');
+        const items = await res.json();
+        const tbody = document.getElementById('history-tbody');
+        tbody.innerHTML = '';
+        items.forEach(it => {
+          const tr = document.createElement('tr');
+          const title = it.title || it.topic || 'Untitled';
+          const date = (it.created_at || '').substring(0, 16);
+          const badgeClass = it.status === 'uploaded' ? 'uploaded' : (it.status === 'failed' ? 'failed' : 'generated');
+          tr.innerHTML = `
+            <td>${date}</td>
+            <td>${it.niche_id}</td>
+            <td><strong>${title}</strong></td>
+            <td>${it.mode}</td>
+            <td><span class="status-badge ${badgeClass}">${it.status}</span></td>
+            <td>
+              ${it.youtube_video_id ? `<a href="https://youtu.be/${it.youtube_video_id}" target="_blank" class="btn btn-outlined" style="height: 28px; padding: 0 10px; font-size: 11px;">View</a>` : ''}
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch(e) {}
+    }
+
+    function selectMode(mode, element) {
+      document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+      element.classList.add('selected');
+      currentMode = mode;
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+      if (tab === 'create') {
+        document.querySelectorAll('.tab-item')[0].classList.add('active');
+        document.getElementById('view-create').style.display = 'grid';
+        document.getElementById('view-history').style.display = 'none';
+      } else {
+        document.querySelectorAll('.tab-item')[1].classList.add('active');
+        document.getElementById('view-create').style.display = 'none';
+        document.getElementById('view-history').style.display = 'block';
+        loadHistory();
+      }
+    }
+
+    async function startGeneration() {
+      const btn = document.getElementById('btn-generate');
+      const progressBox = document.getElementById('progress-box');
+      const progressMsg = document.getElementById('progress-msg');
+      const progressFill = document.getElementById('progress-fill');
+      const progressPct = document.getElementById('progress-pct');
+
+      btn.disabled = true;
+      progressBox.style.display = 'block';
+      progressMsg.innerText = 'Starting pipeline...';
+      progressFill.style.width = '5%';
+      progressPct.innerText = '5%';
+
+      const payload = {
+        niche_id: currentNiche,
+        mode: currentMode,
+        topic_hint: document.getElementById('topic-hint').value.trim() || null,
+        dry_run: document.getElementById('dry-run-check').checked,
+        privacy_status: 'unlisted',
+      };
+
+      try {
+        const resp = await fetch('/api/generate', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload),
+        });
+        const data = await resp.json();
+        const jobId = data.job_id;
+
+        // Poll progress
+        const interval = setInterval(async () => {
+          const pRes = await fetch(`/api/progress/${jobId}`);
+          const pData = await pRes.json();
+          progressMsg.innerText = pData.message || 'Processing...';
+          progressFill.style.width = `${pData.percent}%`;
+          progressPct.innerText = `${pData.percent}%`;
+
+          if (pData.status === 'completed') {
+            clearInterval(interval);
+            btn.disabled = false;
+            loadStats();
+            if (pData.result) {
+              displayShortPreview(pData.result);
+            }
+          } else if (pData.status === 'failed') {
+            clearInterval(interval);
+            btn.disabled = false;
+            alert('Error generating short: ' + pData.error);
+          }
+        }, 1500);
+
+      } catch(err) {
+        btn.disabled = false;
+        alert('Request failed: ' + err);
+      }
+    }
+
+    function displayShortPreview(result) {
+      currentSessionId = result.session_id;
+      const videoPath = result.video_path;
+      const filename = videoPath.split(/[\\\\/]/).pop();
+
+      const videoEl = document.getElementById('preview-video');
+      const placeholder = document.getElementById('preview-placeholder');
+      const metaBox = document.getElementById('meta-box');
+
+      placeholder.style.display = 'none';
+      videoEl.style.display = 'block';
+      videoEl.src = `/api/video/${filename}`;
+      videoEl.load();
+      videoEl.play();
+
+      metaBox.style.display = 'block';
+      document.getElementById('meta-title').innerText = result.script.title;
+      document.getElementById('meta-hook').innerText = result.script.hook;
+    }
+
+    async function uploadCurrentShort() {
+      if (!currentSessionId) return;
+      const btn = document.getElementById('btn-upload-direct');
+      btn.disabled = true;
+      btn.innerText = 'Uploading to YouTube...';
+      try {
+        const res = await fetch(`/api/upload/${currentSessionId}`, {method: 'POST'});
+        const data = await res.json();
+        alert(`Successfully uploaded to YouTube!\nVideo URL: ${data.url}`);
+        btn.innerText = 'Uploaded!';
+        loadStats();
+      } catch(e) {
+        alert('Upload failed: ' + e);
+        btn.disabled = false;
+        btn.innerText = 'Upload to YouTube Now';
+      }
+    }
+
+    // Initial load
+    loadStats();
+    loadNiches();
+  </script>
+</body>
+</html>

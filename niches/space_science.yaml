@@ -1,0 +1,61 @@
+# Niche Intelligence Profile: Cosmic Mysteries & Deep Space
+name: space_science
+display_name: "Cosmic Mysteries & Deep Space"
+rpm_tier: "Medium-High ($3.00 - $6.50)"
+
+script:
+  tone: "awe-inspiring, existential, terrifying, cinematic"
+  pacing: "epic crescendo, mind-bending scale transitions"
+  hooks:
+    - pattern: "cosmic_horror"
+      template: "Astronomers pointed James Webb at deep space and found something that shouldn't exist."
+    - pattern: "existential_dread"
+      template: "In four billion years, {topic} will erase our entire solar system."
+    - pattern: "unexplained_signal"
+      template: "Scientists just detected a repeating radio signal from 500 million light years away."
+    - pattern: "scale_contrast"
+      template: "If you think the universe is empty, wait until you hear about {topic}."
+  cta_variants:
+    - "Subscribe if space terrifies and fascinates you."
+    - "Comment your theory: are we alone in the universe?"
+    - "Follow for daily cosmic discoveries."
+  word_count: "125 to 145"
+  forbidden:
+    - "what is up space fans"
+    - "hit that like button"
+    - "thanks for watching"
+
+visuals:
+  style: "hyper-detailed deep space photography, 4K nebula zooms, volumetric starfields"
+  mood: "monumental, mysterious, infinite"
+  subjects:
+    - "spinning black hole accretion disk"
+    - "glowing purple nebula star nursery"
+    - "supernova cosmic explosion shockwave"
+    - "James Webb telescope golden mirrors in orbit"
+    - "distant alien exoplanet with twin moons"
+  avoid:
+    - "cartoon alien drawings"
+    - "low-res NASA 1970s TV static"
+    - "cheap CGI spaceships"
+
+voice:
+  pace: "+5%"
+  energy: "deep, commanding, resonant, dramatic"
+  suggested_voices:
+    edge_tts: "en-US-ChristopherNeural"
+
+captions:
+  highlight_color: "&H00FFFF00&"  # Cyan/Aqua in BGR hex (&H00FFFF00&)
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "cinematic orchestral space ambient, ethereal drones"
+  energy: "medium"
+
+discovery:
+  reddit: ["space", "astronomy", "Cosmology", "JamesWebb"]
+  hackernews: false
+  google_trends_category: "s"

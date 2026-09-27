@@ -1,0 +1,59 @@
+# Niche Intelligence Profile: Wealth & Finance Secrets
+name: wealth_finance
+display_name: "Wealth Psychology & Money Rules"
+rpm_tier: "Very High ($5.00 - $12.00)"
+
+script:
+  tone: "sharp, contrarian, direct, pragmatic, wake-up call"
+  pacing: "snappy, zero fluff, reality check"
+  hooks:
+    - pattern: "counter_intuitive"
+      template: "The middle class thinks {action} makes you rich. The top 1% do the exact opposite."
+    - pattern: "banking_secret"
+      template: "Here is how banks legally make money on your savings without your knowledge."
+    - pattern: "harsh_truth"
+      template: "If you want to understand true wealth, look at this one single number."
+  cta_variants:
+    - "Follow for the money rules schools never taught you."
+    - "Do you agree with this financial rule? Comment below."
+    - "Subscribe for daily wealth psychology breakdowns."
+  word_count: "120 to 140"
+  forbidden:
+    - "get rich quick"
+    - "guaranteed profit"
+    - "not financial advice"
+    - "subscribe to my course"
+
+visuals:
+  style: "monochromatic luxury, modern architectural glass, vault doors, stock market screens"
+  mood: "sophisticated, calculated, sharp"
+  subjects:
+    - "bank vault heavy door opening"
+    - "skyscraper glass reflection city"
+    - "stock trading candlestick charts"
+    - "counting luxury banknotes"
+    - "man in sharp tailored suit silhouette"
+  avoid:
+    - "cheap gold coins"
+    - "cartoony money bags"
+    - "gambling tables"
+
+voice:
+  pace: "+8%"
+  energy: "direct, confident, persuasive"
+  suggested_voices:
+    edge_tts: "en-US-GuyNeural"
+
+captions:
+  highlight_color: "&H0000FFFF&"  # Golden Yellow in BGR hex
+  font_name: "Montserrat-Black"
+  font_weight: "bold"
+  position: "lower_third"
+
+music:
+  mood: "lo-fi dark trap, rhythmic pulse, subtle bass"
+  energy: "medium"
+
+discovery:
+  reddit: ["economics", "personalfinance", "wallstreetbets", "fatFIRE"]
+  google_trends_category: "b"

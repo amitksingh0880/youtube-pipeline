@@ -16,7 +16,7 @@ class SsembleAPIError(Exception):
 
 class SsembleClient:
     def __init__(self, api_key: Optional[str] = None, base_url: Optional[str] = None):
-        self.api_key = api_key or settings.ssemble_api_key
+        self.api_key = api_key if api_key is not None else settings.ssemble_api_key
         self.base_url = (base_url or settings.ssemble_base_url).rstrip("/")
         if not self.api_key:
             # We don't fail at init so local-studio mode works without Ssemble key,
@@ -39,7 +39,10 @@ class SsembleClient:
         resp = requests.get(url, headers=self.headers, timeout=30)
         if not resp.ok:
             raise SsembleAPIError(f"Failed to list templates ({resp.status_code}): {resp.text}")
-        return resp.json().get("data", [])
+        payload = resp.json().get("data", {})
+        if isinstance(payload, dict):
+            return payload.get("templates", [])
+        return payload if isinstance(payload, list) else []
 
     def list_music(self) -> List[Dict[str, Any]]:
         """Retrieves list of available royalty-free music tracks."""
@@ -47,7 +50,10 @@ class SsembleClient:
         resp = requests.get(url, headers=self.headers, timeout=30)
         if not resp.ok:
             raise SsembleAPIError(f"Failed to list music ({resp.status_code}): {resp.text}")
-        return resp.json().get("data", [])
+        payload = resp.json().get("data", {})
+        if isinstance(payload, dict):
+            return payload.get("music", [])
+        return payload if isinstance(payload, list) else []
 
     def list_meme_hooks(self) -> List[Dict[str, Any]]:
         """Retrieves available viral meme hooks."""
@@ -55,7 +61,10 @@ class SsembleClient:
         resp = requests.get(url, headers=self.headers, timeout=30)
         if not resp.ok:
             raise SsembleAPIError(f"Failed to list meme hooks ({resp.status_code}): {resp.text}")
-        return resp.json().get("data", [])
+        payload = resp.json().get("data", {})
+        if isinstance(payload, dict):
+            return payload.get("memeHooks", [])
+        return payload if isinstance(payload, list) else []
 
     def create_short(
         self,

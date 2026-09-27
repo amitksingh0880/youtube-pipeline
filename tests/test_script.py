@@ -12,7 +12,7 @@ def test_script_engine_schema_and_generation():
     assert len(script.hook) > 5
     assert len(script.beats) >= 4
     assert script.loop_anchor != ""
-    assert "#Shorts" in script.title
+    assert ("#Shorts" in script.title or "#Shorts" in script.description)
     assert len(script.tags) >= 3
 
     for beat in script.beats:

@@ -93,20 +93,29 @@ Requirements:
 - Provide concrete, cinematic 2-4 word visual queries for B-roll footage.
 - Output ONLY valid JSON conforming to the requested schema."""
 
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_INSTRUCTION,
-                response_mime_type="application/json",
-                response_schema=YouTubeShortScript,
-                temperature=0.8,
-            ),
-        )
+        candidate_models = [self.model, "gemini-flash-latest", "gemini-3.5-flash", "gemini-3.7-flash"]
+        unique_models = list(dict.fromkeys([m for m in candidate_models if m]))
 
-        # Parse output into Pydantic model
-        script = YouTubeShortScript.model_validate_json(response.text)
-        return script
+        last_error = None
+        for target_model in unique_models:
+            try:
+                response = self.client.models.generate_content(
+                    model=target_model,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        system_instruction=SYSTEM_INSTRUCTION,
+                        response_mime_type="application/json",
+                        response_schema=YouTubeShortScript,
+                        temperature=0.8,
+                    ),
+                )
+                script = YouTubeShortScript.model_validate_json(response.text)
+                return script
+            except Exception as e:
+                last_error = e
+                continue
+
+        raise RuntimeError(f"All Gemini candidate models failed to generate script: {last_error}")
 
     def _generate_offline_mock(self, niche: dict, topic_hint: Optional[str] = None) -> YouTubeShortScript:
         """Offline high-quality mock script for local testing when no Gemini key is set."""

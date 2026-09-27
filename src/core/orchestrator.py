@@ -158,6 +158,7 @@ class ShortsOrchestrator:
             raw_footage_paths = self.stock_sourcer.source_beat_footage(
                 beats=script.beats,
                 work_dir=work_dir,
+                niche=niche,
             )
 
             # Step 6: Dynamic Motion FX (Ken Burns & 9:16 Reframe)
@@ -170,6 +171,7 @@ class ShortsOrchestrator:
                     output_video=out_clip,
                     target_duration=meta["duration"],
                     apply_ken_burns=True,
+                    beat_index=i,
                 )
                 reframed_clips.append(out_clip)
 

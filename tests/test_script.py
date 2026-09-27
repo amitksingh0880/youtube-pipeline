@@ -4,7 +4,8 @@ from src.modules.scripting.script_engine import ScriptEngine, YouTubeShortScript
 
 
 def test_script_engine_schema_and_generation():
-    engine = ScriptEngine()
+    # Pass api_key="" to test schema validation and mock generator without calling metered Gemini API
+    engine = ScriptEngine(api_key="")
     niche = {"id": "dark_history", "name": "Dark History"}
     script = engine.generate_script(niche, topic_hint="Acoustic Kitty")
 

@@ -387,9 +387,10 @@ def authorize_youtube():
         from google_auth_oauthlib.flow import InstalledAppFlow
         from src.modules.publishing.youtube_oauth import SCOPES
         
-        # We will catch the callback on our own FastAPI server port 8000
+        # Determine backend URL for callback
+        backend_url = os.environ.get("BACKEND_URL", "http://localhost:8000").rstrip("/")
         flow = InstalledAppFlow.from_client_secrets_file(str(settings.abs_client_secrets_path), SCOPES)
-        flow.redirect_uri = "http://localhost:8000/api/settings/youtube/callback"
+        flow.redirect_uri = f"{backend_url}/api/settings/youtube/callback"
         
         auth_url, state = flow.authorization_url(prompt='consent', access_type='offline')
         

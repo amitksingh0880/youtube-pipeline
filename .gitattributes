@@ -1,0 +1,3 @@
+# Ignore generated design screens from GitHub Linguist language statistics
+stitch_designs/** linguist-generated=true
+stitch_designs/** linguist-vendored=true

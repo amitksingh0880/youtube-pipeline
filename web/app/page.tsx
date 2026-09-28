@@ -132,14 +132,14 @@ export default function StudioGeneratorPage() {
   };
 
   return (
-    <div className="h-full flex flex-col justify-between gap-3 overflow-hidden">
+    <div className="flex flex-col gap-4">
       {/* STATS OVERVIEW */}
       <StudioStatsRow />
 
       {/* WORKSPACE GRID */}
-      <div className="grid gap-3 lg:grid-cols-12 flex-1 min-h-0 items-stretch">
+      <div className="grid gap-4 lg:grid-cols-12 items-start">
         {/* CONFIG FORM (7 COLS) */}
-        <div className="lg:col-span-7 space-y-3 overflow-y-auto pr-1">
+        <div className="lg:col-span-7 space-y-4">
           <NicheSelector selectedNiche={selectedNiche} onSelectNiche={setSelectedNiche} />
           <PipelineModeCards selectedMode={pipelineMode} onSelectMode={setPipelineMode} />
 
@@ -218,7 +218,7 @@ export default function StudioGeneratorPage() {
         </div>
 
         {/* PREVIEW PLAYER (5 COLS) */}
-        <div className="lg:col-span-5 h-full">
+        <div className="lg:col-span-5 flex flex-col gap-4">
           <StudioPreviewPlayer
             isGenerating={isGenerating}
             progress={progress}

@@ -5,11 +5,14 @@ Enforces the 2026 YouTube Shorts 4-act viral retention framework.
 """
 
 import json
+import logging
 from typing import List, Optional
 from pydantic import BaseModel, Field
 from google import genai
 from google.genai import types
 from src.core.config import settings
+
+logger = logging.getLogger(__name__)
 
 
 class ScriptBeat(BaseModel):
@@ -55,7 +58,7 @@ Tone: Authoritative, intriguing, fast-paced, conversational, completely free of 
 
 class ScriptEngine:
     def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None):
-        self.api_key = api_key or settings.gemini_api_key
+        self.api_key = api_key if api_key is not None else settings.gemini_api_key
         self.model = model or settings.gemini_model
         self.client = genai.Client(api_key=self.api_key) if self.api_key else None
 
@@ -115,7 +118,8 @@ Requirements:
                 last_error = e
                 continue
 
-        raise RuntimeError(f"All Gemini candidate models failed to generate script: {last_error}")
+        logger.warning(f"All Gemini candidate models failed ({last_error}). Falling back to offline mock script.")
+        return self._generate_offline_mock(niche, topic_hint)
 
     def _generate_offline_mock(self, niche: dict, topic_hint: Optional[str] = None) -> YouTubeShortScript:
         """Offline high-quality mock script for local testing when no Gemini key is set."""

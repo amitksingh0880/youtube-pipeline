@@ -94,14 +94,16 @@ def run_studio_server():
     web_dir = Path(__file__).resolve().parent.parent / "web"
 
     def run_next():
-        cmd = "npm.cmd run start" if (web_dir / ".next").exists() else "npm.cmd run dev"
+        # Always run dev server for immediate live updates and hot module replacement
+        cmd = "npm.cmd run dev"
         subprocess.run(cmd, cwd=str(web_dir), shell=True)
 
     t = threading.Thread(target=run_next, daemon=True)
     t.start()
 
-    console.print(f"[bold green]Starting Next.js Google M3 Studio on http://localhost:3000[/bold green]")
+    console.print(f"[bold green]Starting Next.js Google Material 3 Studio on http://localhost:3000[/bold green]")
     console.print(f"[dim]Backend FastAPI service active on http://{settings.studio_host}:{settings.studio_port}[/dim]")
+    console.print(f"[dim]API Documentation available at http://{settings.studio_host}:{settings.studio_port}/docs[/dim]")
 
     def open_browser():
         time.sleep(2.5)

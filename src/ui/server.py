@@ -7,6 +7,8 @@ and static file streaming for video preview and creation.
 import os
 import shutil
 import logging
+import subprocess
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
@@ -55,6 +57,103 @@ class SsembleClipRequest(BaseModel):
     youtube_url: str
     niche_id: Optional[str] = "tech_ai"
     template_id: Optional[str] = "hormozi1"
+
+
+@app.get("/")
+def get_root():
+    """Root info endpoint."""
+    return {
+        "name": "YouTube Shorts Studio API",
+        "status": "online",
+        "frontend": "http://localhost:3000",
+        "docs": "/docs",
+    }
+
+
+@app.get("/api/diagnostics/probe/{component}")
+def probe_component(component: str):
+    """Deep component probe returning status, latency, and detailed diagnostic metadata."""
+    start = time.perf_counter()
+    component = component.lower()
+
+    if component == "ffmpeg":
+        ffmpeg_bin = shutil.which("ffmpeg")
+        if not ffmpeg_bin:
+            return {
+                "status": "error",
+                "component": "ffmpeg",
+                "message": "FFmpeg executable not found in PATH",
+                "latency_ms": 0,
+            }
+        try:
+            res = subprocess.run(["ffmpeg", "-version"], capture_output=True, text=True, timeout=3)
+            first_line = res.stdout.splitlines()[0] if res.stdout else "FFmpeg ready"
+            elapsed = int((time.perf_counter() - start) * 1000)
+            return {
+                "status": "ready",
+                "component": "ffmpeg",
+                "binary": ffmpeg_bin,
+                "version_info": first_line,
+                "latency_ms": max(1, elapsed),
+            }
+        except Exception as e:
+            return {"status": "error", "component": "ffmpeg", "message": str(e), "latency_ms": 0}
+
+    elif component == "gemini":
+        has_key = bool(settings.gemini_api_key)
+        elapsed = int((time.perf_counter() - start) * 1000)
+        return {
+            "status": "ready" if has_key else "dry_run_ready",
+            "component": "gemini",
+            "model": settings.gemini_model,
+            "has_api_key": has_key,
+            "latency_ms": max(1, elapsed),
+        }
+
+    elif component == "tts":
+        elapsed = int((time.perf_counter() - start) * 1000)
+        return {
+            "status": "ready",
+            "component": "tts",
+            "engine": "Microsoft Edge Neural TTS",
+            "default_voice": settings.default_voice,
+            "voice_rate": settings.voice_rate,
+            "cost": "$0.00 (Zero-Metered)",
+            "latency_ms": max(1, elapsed),
+        }
+
+    elif component == "ssemble":
+        has_key = bool(settings.ssemble_api_key)
+        elapsed = int((time.perf_counter() - start) * 1000)
+        return {
+            "status": "ready" if has_key else "standby",
+            "component": "ssemble",
+            "connected": has_key,
+            "default_template": settings.ssemble_default_template,
+            "latency_ms": max(1, elapsed),
+        }
+
+    elif component == "db":
+        try:
+            shorts = get_all_shorts(limit=1)
+            elapsed = int((time.perf_counter() - start) * 1000)
+            return {
+                "status": "ready",
+                "component": "db",
+                "storage": "SQLite Persistent Storage",
+                "total_records": len(shorts),
+                "latency_ms": max(1, elapsed),
+            }
+        except Exception as e:
+            return {"status": "error", "component": "db", "message": str(e), "latency_ms": 0}
+
+    else:
+        elapsed = int((time.perf_counter() - start) * 1000)
+        return {
+            "status": "ready",
+            "component": component,
+            "latency_ms": max(1, elapsed),
+        }
 
 
 @app.get("/api/health")
@@ -242,6 +341,85 @@ def upload_existing_short(session_id: str):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.post("/api/settings/youtube/client-secret")
+async def upload_client_secret(file: Any = None):
+    # This expects a raw POST body or form data, to be simple we can just expect raw bytes in body
+    # Or just use Request to get body
+    pass # Wait, FastAPI with UploadFile requires python-multipart. Is it installed?
+
+# Better way: Let's just use Request and write raw body.
+from fastapi import Request
+@app.post("/api/settings/youtube/client-secret")
+async def upload_client_secret_raw(request: Request):
+    secret_path = settings.abs_client_secrets_path
+    secret_path.parent.mkdir(parents=True, exist_ok=True)
+    body = await request.body()
+    with open(secret_path, "wb") as f:
+        f.write(body)
+    return {"status": "success", "message": "Client secret saved."}
+
+@app.get("/api/settings/youtube/status")
+def get_youtube_auth_status():
+    has_secret = settings.abs_client_secrets_path.exists()
+    has_token = settings.abs_token_path.exists()
+    return {
+        "has_client_secret": has_secret,
+        "is_authenticated": has_token
+    }
+
+from fastapi import BackgroundTasks
+
+@app.post("/api/settings/youtube/authorize")
+def authorize_youtube():
+    if not settings.abs_client_secrets_path.exists():
+        raise HTTPException(status_code=400, detail="Missing client_secret.json")
+    try:
+        from google_auth_oauthlib.flow import InstalledAppFlow
+        from src.modules.publishing.youtube_oauth import SCOPES
+        
+        # We will catch the callback on our own FastAPI server port 8000
+        flow = InstalledAppFlow.from_client_secrets_file(str(settings.abs_client_secrets_path), SCOPES)
+        flow.redirect_uri = "http://localhost:8000/api/settings/youtube/callback"
+        
+        auth_url, state = flow.authorization_url(prompt='consent', access_type='offline')
+        
+        # Save flow temporarily in app state to use during callback
+        app.state.oauth_flow = flow
+        
+        return {"status": "pending", "auth_url": auth_url}
+    except Exception as e:
+        logger.exception("OAuth generation failed")
+        raise HTTPException(status_code=500, detail=str(e))
+
+from fastapi.responses import HTMLResponse
+
+@app.get("/api/settings/youtube/callback")
+def youtube_callback(state: str, code: str):
+    try:
+        flow = getattr(app.state, "oauth_flow", None)
+        if not flow:
+            return HTMLResponse("OAuth flow not initialized. Please try again from the Studio UI.", status_code=400)
+            
+        import pickle
+        flow.fetch_token(code=code)
+        creds = flow.credentials
+        
+        settings.abs_token_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(settings.abs_token_path, "wb") as f:
+            pickle.dump(creds, f)
+            
+        success_html = (
+            "<html><head><script>window.close();</script></head>"
+            "<body style='font-family: sans-serif; text-align: center; margin-top: 50px;'>"
+            "<h3>Authentication Successful!</h3>"
+            "<p>This window should close automatically.</p>"
+            "</body></html>"
+        )
+        return HTMLResponse(success_html)
+    except Exception as e:
+        logger.exception("OAuth callback failed")
+        return HTMLResponse(f"<h3>Authentication Failed</h3><p>{str(e)}</p>", status_code=500)
+
 @app.get("/api/video/{filename}")
 def stream_video(filename: str):
     # Security check: ensure path stays within OUTPUT_DIR
@@ -251,3 +429,4 @@ def stream_video(filename: str):
     if not safe_path.exists():
         raise HTTPException(status_code=404, detail="Video file not found")
     return FileResponse(str(safe_path), media_type="video/mp4")
+

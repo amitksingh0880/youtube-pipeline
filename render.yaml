@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: youtube-pipeline-backend
+    env: docker
+    region: oregon
+    plan: free
+    healthCheckPath: /api/settings/youtube/status
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: GEMINI_API_KEY
+        sync: false

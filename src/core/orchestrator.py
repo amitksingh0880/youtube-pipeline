@@ -135,7 +135,15 @@ class ShortsOrchestrator:
 
             # Step 4: Neural Speech Synthesis
             update_progress("Synthesizing studio-grade human narration (Edge-TTS)...", 50)
-            voice_id = niche.get("default_voice", settings.default_voice)
+            voice_id = niche.get("voice", niche.get("default_voice", settings.default_voice))
+            
+            if voice_id == "ChristopherNeural":
+                voice_id = "en-US-ChristopherNeural"
+            elif voice_id == "GuyNeural":
+                voice_id = "en-US-GuyNeural"
+            elif voice_id == "AriaNeural":
+                voice_id = "en-US-AriaNeural"
+                
             voice_rate = niche.get("voice_rate", settings.voice_rate)
             beats_meta = self.neural_tts.synthesize_beats(
                 beats=script.beats,
@@ -234,29 +242,7 @@ class ShortsOrchestrator:
         )
 
         upload_result = None
-        if not dry_run:
-            update_progress("Uploading to YouTube with 2026 Altered Media compliance...", 95)
-            try:
-                upload_result = self.youtube_uploader.upload_short(
-                    video_path=final_short_path,
-                    title=script.title,
-                    description=script.description,
-                    tags=script.tags,
-                    privacy_status=privacy_status,
-                    contains_synthetic_media=True,
-                )
-                update_short_status(
-                    session_id=session_id,
-                    status="uploaded",
-                    youtube_video_id=upload_result.get("video_id"),
-                )
-                update_progress(f"Published successfully: {upload_result.get('url')}", 100)
-            except Exception as e:
-                logger.error(f"YouTube upload failed: {e}")
-                update_short_status(session_id=session_id, status="failed", error_message=str(e))
-                update_progress(f"Upload failed: {e}", 100)
-        else:
-            update_progress(f"Dry-run complete. Saved locally to {final_short_path}", 100)
+        update_progress(f"Generation complete. Ready for manual upload.", 100)
 
         return {
             "session_id": session_id,

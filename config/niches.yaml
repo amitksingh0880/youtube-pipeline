@@ -67,3 +67,29 @@ niches:
       - "creepy humanoid robotics advances"
       - "brain computer interface tests"
       - "how surveillance algorithms track humans"
+
+  - id: hindi_mythology
+    name: "Hindu Mythology (Hindi)"
+    rpm_tier: "Medium-High"
+    default_voice: "hi-IN-MadhurNeural"
+    voice_rate: "+0%"
+    weight: 3
+    description: "Fascinating Indian mythological tales, ancient texts, and epic stories."
+    language: "hi"
+    seed_queries:
+      - "unknown facts about mahabharata"
+      - "mystery of kailash parvat"
+      - "chanakya niti quotes"
+
+  - id: hindi_motivation
+    name: "Motivation & Life Rules (Hindi)"
+    rpm_tier: "Medium-High"
+    default_voice: "hi-IN-SwaraNeural"
+    voice_rate: "+0%"
+    weight: 3
+    description: "High energy motivational quotes, self-improvement, and life advice."
+    language: "hi"
+    seed_queries:
+      - "success rules in hindi"
+      - "how to stay motivated"
+      - "powerful quotes for students"

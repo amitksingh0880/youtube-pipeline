@@ -28,6 +28,8 @@ export const STUDIO_STATS = [
 export const NICHES_CONFIG = [
   { id: "dark_history", name: "Dark History & Unsolved Paradoxes", rpm: "$4.00 - $8.50", volume: "High", voice: "ChristopherNeural", retention: "78%", icon: "📜", avgViews: "1.2M" },
   { id: "tech_ai", name: "Tech & AI Breakthroughs", rpm: "$4.50 - $9.00", volume: "Very High", voice: "GuyNeural", retention: "72%", icon: "🤖", avgViews: "890K" },
+  { id: "hindi_mythology", name: "Hindu Mythology (Hindi)", rpm: "$2.00 - $5.50", volume: "Extreme", default_voice: "hi-IN-MadhurNeural", retention: "85%", icon: "🕉️", avgViews: "3.5M", language: "hi" },
+  { id: "hindi_motivation", name: "Motivation & Life Rules (Hindi)", rpm: "$2.50 - $6.00", volume: "Extreme", default_voice: "hi-IN-SwaraNeural", retention: "82%", icon: "🔥", avgViews: "2.8M", language: "hi" },
   { id: "psychology", name: "Human Psychology & Mind Games", rpm: "$3.50 - $7.00", volume: "Extreme", voice: "ChristopherNeural", retention: "81%", icon: "🧠", avgViews: "1.5M" },
   { id: "space_science", name: "Cosmic Mysteries & Deep Space", rpm: "$3.00 - $6.50", volume: "Medium", voice: "ChristopherNeural", retention: "75%", icon: "🚀", avgViews: "720K" },
   { id: "wealth_finance", name: "Wealth Psychology & Money Rules", rpm: "$5.00 - $12.00", volume: "Extreme", voice: "GuyNeural", retention: "84%", icon: "📈", avgViews: "2.1M" },

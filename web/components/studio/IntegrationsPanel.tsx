@@ -108,37 +108,19 @@ export function IntegrationsPanel() {
               </span>
               OAuth Client Secret File
             </Label>
-            {hasSecret && (
+            {hasSecret ? (
               <span className="text-[10px] text-emerald-500 font-medium flex items-center">
                 client_secret.json loaded
               </span>
+            ) : (
+              <span className="text-[10px] text-destructive font-medium flex items-center">
+                Missing from environment
+              </span>
             )}
-          </div>
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-full relative h-8 text-xs font-medium bg-background"
-              disabled={isUploadingFile}
-            >
-              {isUploadingFile ? (
-                <Loader2 className="h-3.5 w-3.5 mr-2 animate-spin" />
-              ) : (
-                <Upload className="h-3.5 w-3.5 mr-2" />
-              )}
-              {hasSecret ? 'Replace client_secret.json' : 'Upload client_secret.json'}
-              <input
-                type="file"
-                accept=".json,application/json,text/plain,*/*"
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                onChange={handleFileUpload}
-                disabled={isUploadingFile}
-              />
-            </Button>
           </div>
           {!hasSecret && (
             <p className="text-[10px] text-muted-foreground mt-1">
-              Download this from Google Cloud Console (Desktop App type).
+              Add GOOGLE_CLIENT_SECRET_JSON to your Render environment variables to enable YouTube authentication.
             </p>
           )}
         </div>

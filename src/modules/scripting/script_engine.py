@@ -86,14 +86,18 @@ class ScriptEngine:
         if research_context:
             research_block = f"\n\n{research_context}\n\nSTRICT REQUIREMENT: All historical facts, numbers, dates, and names in your script must be grounded in the verified research facts above. Do NOT hallucinate unverified claims."
 
+        language_rule = ""
+        if niche.get("language") == "hi":
+            language_rule = "\n\nCRITICAL LANGUAGE REQUIREMENT: Write the entire script (including all beats and the hook) strictly in native Hindi using the Devanagari script (e.g., नमस्ते). Do not write in English or Hinglish."
+
         prompt = f"""Target Niche: {niche['name']} ({niche.get('description', '')})
-Topic Hint: {topic_hint or 'Pick the most fascinating, viral, and lesser-known story/concept in this niche.'}{exclude_block}{research_block}
+Topic Hint: {topic_hint or 'Pick the most fascinating, viral, and lesser-known story/concept in this niche.'}{exclude_block}{research_block}{language_rule}
 
 Requirements:
 - Target spoken length: 45-55 seconds (120-145 words total).
 - 4 to 6 beats total.
 - Ensure the final beat ends on an infinite loop anchor that loops into the first sentence.
-- Provide concrete, cinematic 2-4 word visual queries for B-roll footage.
+- Provide concrete, cinematic 2-4 word visual queries for B-roll footage (these can stay in English).
 - Output ONLY valid JSON conforming to the requested schema."""
 
         candidate_models = [self.model, "gemini-flash-latest", "gemini-3.5-flash", "gemini-3.7-flash"]

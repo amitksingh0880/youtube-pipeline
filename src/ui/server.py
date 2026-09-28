@@ -36,6 +36,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Render / Cloud Deployment: Auto-inject client secret from Environment Variable if present
+if os.environ.get("GOOGLE_CLIENT_SECRET_JSON"):
+    try:
+        settings.abs_client_secrets_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(settings.abs_client_secrets_path, "w", encoding="utf-8") as f:
+            f.write(os.environ["GOOGLE_CLIENT_SECRET_JSON"])
+        logger.info("Loaded GOOGLE_CLIENT_SECRET_JSON from environment.")
+    except Exception as e:
+        logger.error(f"Failed to write GOOGLE_CLIENT_SECRET_JSON: {e}")
+
 # Global progress tracker for live studio updates
 JOB_PROGRESS: Dict[str, Dict[str, Any]] = {}
 

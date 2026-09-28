@@ -10,3 +10,5 @@ services:
         value: 8000
       - key: GEMINI_API_KEY
         sync: false
+      - key: GOOGLE_CLIENT_SECRET_JSON
+        sync: false

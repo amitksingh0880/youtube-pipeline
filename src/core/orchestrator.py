@@ -118,17 +118,27 @@ class ShortsOrchestrator:
 
         # Step 2.5: Anti-Hallucination Research Gate (Verticals v3 Innovation)
         update_progress(f"Researching verified live facts for '{active_topic}'...", 25)
-        facts = self.research_gate.search_facts(active_topic)
-        research_ctx = self.research_gate.format_research_context(facts)
+        
+        research_ctx = ""
+        if not dry_run:
+            facts = self.research_gate.search_facts(active_topic)
+            research_ctx = self.research_gate.format_research_context(facts)
+        else:
+            logger.info("Dry run enabled: Skipping fact research.")
 
         # Step 3: Scriptwriting with Gemini 2.0 Flash
         update_progress("Writing high-retention script with Gemini 2.0 Flash...", 35)
-        script = self.script_engine.generate_script(
-            niche=niche,
-            topic_hint=active_topic,
-            exclude_topics=exclusions,
-            research_context=research_ctx,
-        )
+        
+        if dry_run:
+            logger.info("Dry run enabled: Generating mock script to save API costs.")
+            script = self.script_engine._generate_offline_mock(niche, topic_hint=active_topic)
+        else:
+            script = self.script_engine.generate_script(
+                niche=niche,
+                topic_hint=active_topic,
+                exclude_topics=exclusions,
+                research_context=research_ctx,
+            )
 
         with tempfile.TemporaryDirectory() as td:
             work_dir = Path(td)
@@ -145,11 +155,14 @@ class ShortsOrchestrator:
                 voice_id = "en-US-AriaNeural"
                 
             voice_rate = niche.get("voice_rate", settings.voice_rate)
+            voice_pitch = niche.get("voice_pitch", settings.voice_pitch)
+            
             beats_meta = self.neural_tts.synthesize_beats(
                 beats=script.beats,
                 work_dir=work_dir,
                 voice=voice_id,
                 rate=voice_rate,
+                pitch=voice_pitch,
             )
 
             # Concatenate beat audio tracks

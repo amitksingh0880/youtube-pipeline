@@ -72,7 +72,8 @@ niches:
     name: "Hindu Mythology (Hindi)"
     rpm_tier: "Medium-High"
     default_voice: "hi-IN-MadhurNeural"
-    voice_rate: "+0%"
+    voice_rate: "-12%"
+    voice_pitch: "-4Hz"
     weight: 3
     description: "Fascinating Indian mythological tales, ancient texts, and epic stories."
     language: "hi"
@@ -85,7 +86,8 @@ niches:
     name: "Motivation & Life Rules (Hindi)"
     rpm_tier: "Medium-High"
     default_voice: "hi-IN-SwaraNeural"
-    voice_rate: "+0%"
+    voice_rate: "-12%"
+    voice_pitch: "-2Hz"
     weight: 3
     description: "High energy motivational quotes, self-improvement, and life advice."
     language: "hi"

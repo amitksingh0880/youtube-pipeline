@@ -128,6 +128,50 @@ Requirements:
     def _generate_offline_mock(self, niche: dict, topic_hint: Optional[str] = None) -> YouTubeShortScript:
         """Offline high-quality mock script for local testing when no Gemini key is set."""
         niche_id = niche.get("id", "dark_history")
+        
+        if niche.get("language") == "hi":
+            return YouTubeShortScript(
+                hook_type="Curiosity Gap",
+                hook="चाणक्य की यह एक नीति आपकी पूरी जिंदगी बदल सकती है।",
+                beats=[
+                    ScriptBeat(
+                        beat_number=1,
+                        text="चाणक्य की यह एक नीति आपकी पूरी जिंदगी बदल सकती है।",
+                        visual_query="ancient indian scholar meditating",
+                        duration_est=4.5,
+                    ),
+                    ScriptBeat(
+                        beat_number=2,
+                        text="उन्होंने कहा था कि इंसान की सबसे बड़ी ताकत उसका ज्ञान नहीं, बल्कि उसका धैर्य है।",
+                        visual_query="warrior standing on mountain",
+                        duration_est=6.5,
+                    ),
+                    ScriptBeat(
+                        beat_number=3,
+                        text="जब मुसीबत आती है, तो अज्ञानी लोग घबरा जाते हैं।",
+                        visual_query="stormy ocean dark clouds",
+                        duration_est=5.0,
+                    ),
+                    ScriptBeat(
+                        beat_number=4,
+                        text="लेकिन एक बुद्धिमान व्यक्ति उस तूफान में भी शांत रहता है और अपना रास्ता खोज लेता है।",
+                        visual_query="sunrise shining through clouds",
+                        duration_est=6.0,
+                    ),
+                    ScriptBeat(
+                        beat_number=5,
+                        text="इसलिए हमेशा धैर्य रखें, और अपनी बुद्धि से हर मुश्किल को पार करें।",
+                        visual_query="ancient book open glowing",
+                        duration_est=4.5,
+                    ),
+                ],
+                loop_anchor="और अपनी बुद्धि से हर मुश्किल को पार करें।",
+                title="चाणक्य नीति जो जिंदगी बदल देगी #Shorts",
+                description="जीवन में सफलता के लिए चाणक्य की सबसे शक्तिशाली नीति। #Shorts #Chanakya #Motivation",
+                tags=["shorts", "hindi", "chanakya", "motivation", "success"],
+                pinned_comment="क्या आप इस नीति से सहमत हैं? कमेंट में बताएं!",
+            )
+            
         if niche_id == "dark_history":
             return YouTubeShortScript(
                 hook_type="Pattern Interrupt",

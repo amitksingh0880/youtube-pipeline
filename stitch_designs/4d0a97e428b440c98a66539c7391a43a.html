@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>YouTube Shorts Studio</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#005316","on-secondary":"#003257","on-secondary-fixed-variant":"#00497b","on-primary-fixed":"#410006","tertiary-fixed-dim":"#69df70","on-tertiary-container":"#00320a","on-primary-fixed-variant":"#930019","background":"#131313","outline-variant":"#5f3e3d","error":"#ffb4ab","on-surface":"#e5e2e1","tertiary-container":"#2ba640","surface-container-low":"#1c1b1b","inverse-surface":"#e5e2e1","surface":"#131313","on-tertiary":"#00390d","inverse-primary":"#bf0024","tertiary":"#69df70","secondary-container":"#2295ed","error-container":"#93000a","surface-container-highest":"#353534","primary":"#ffb3af","on-surface-variant":"#e9bcb9","surface-variant":"#353534","secondary-fixed-dim":"#9ccaff","on-secondary-container":"#002b4c","surface-dim":"#131313","surface-container-lowest":"#0e0e0e","on-secondary-fixed":"#001d35","tertiary-fixed":"#85fc89","primary-fixed-dim":"#ffb3af","on-primary-container":"#5c000b","outline":"#b08784","on-primary":"#68000e","primary-fixed":"#ffdad8","on-error":"#690005","surface-bright":"#3a3939","surface-container-high":"#2a2a2a","primary-container":"#ff5357","on-tertiary-fixed":"#002105","secondary-fixed":"#d0e4ff","secondary":"#9ccaff","surface-container":"#201f1f","on-background":"#e5e2e1","inverse-on-surface":"#313030","on-error-container":"#ffdad6","surface-tint":"#ffb3af"},borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},spacing:{"space-sm":"0.5rem","gutter":"1rem","space-xl":"1.5rem","margin":"1.5rem","margin-mobile":"1rem","space-md":"0.75rem","gutter-mobile":"0.5rem","space-lg":"1rem","space-xs":"0.25rem"},fontFamily:{"label-md":["Inter"],"display-lg":["Roboto Flex"],"headline-sm":["Roboto Flex"],"body-md":["Roboto Flex"],"headline-lg":["Roboto Flex"],"label-lg":["Inter"],"body-lg":["Roboto Flex"],"telemetry-code":["Inter"],"headline-md":["Roboto Flex"],"label-sm":["Inter"],"body-sm":["Roboto Flex"],"headline-lg-mobile":["Roboto Flex"],"title-md":["Roboto Flex"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.5px","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.25px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0.1px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0.25px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"0px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.1px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.5px","fontWeight":"400"}],"telemetry-code":["11px",{"lineHeight":"14px","letterSpacing":"0.6px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"0px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.5px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.4px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"0px","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0.15px","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-14 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-white text-[18px]">play_arrow</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">YouTube Shorts Studio</span></div><div class="hidden xl:flex items-center gap-space-xs"><span class="px-space-sm py-space-xs rounded-full bg-secondary-container/20 text-secondary font-telemetry-code text-telemetry-code flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px]">auto_awesome</span>Gemini 2.0 Flash</span><span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface-variant font-telemetry-code text-telemetry-code flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px]">record_voice_over</span>Edge Neural TTS</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-telemetry-code text-telemetry-code text-on-surface">FFmpeg</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-telemetry-code text-telemetry-code text-on-surface">Cloudflare Tunnel</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span><span class="font-telemetry-code text-telemetry-code text-on-surface">Ssemble API</span></div></div><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low font-telemetry-code text-telemetry-code text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>FastAPI :8000</span><span class="opacity-40">|</span><span>Next.js :3000</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-10 w-full px-margin bg-surface-container-low/95 flex items-center justify-between gap-gutter overflow-x-auto"><div class="flex items-center gap-space-xl min-w-max"><div class="flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Total Created:</span><span class="text-tertiary font-label-md text-label-md">12</span><span class="text-on-surface-variant opacity-60">(SQLite archive)</span></div><div class="flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Today's Uploads:</span><span class="text-secondary font-label-md text-label-md">1/6</span><span class="text-on-surface-variant opacity-60">(Spam Safety)</span></div><div class="hidden md:flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Voice Engine:</span><span class="text-on-surface">Microsoft Edge Neural TTS ($0 unmetered)</span></div><div class="hidden lg:flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Compliance:</span><span class="text-tertiary">2026 Aligned</span><span class="text-on-surface-variant opacity-60">(#Shorts altered flag)</span></div></div></div><div class="h-12 w-full px-margin bg-surface-container-lowest flex items-center overflow-x-auto"><nav class="flex items-center gap-space-xs min-w-max py-space-xs" data-active-classes="bg-surface-container text-on-surface font-label-md text-label-md shadow-sm"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="studio-generator" href="#">Studio Generator</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="shorts-library" href="#">Shorts Library (12)</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="niche-intelligence" href="#">Niche Intelligence (15)</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-colors bg-surface-container text-on-surface font-label-md text-label-md shadow-sm" data-path="ssemble-architecture" href="#">Ssemble Architecture</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="engine-diagnostics-pipeline-logs" href="#">Engine Diagnostics &amp; Pipeline Logs</a></nav></div></header><main class="w-full pt-36 px-margin pb-margin bg-background min-h-screen"><div class="flex flex-col w-full gap-space-xl">
+<!-- Pipeline Status & Architecture Overview Bar -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg bg-surface-container-low p-space-lg rounded-DEFAULT shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-xs rounded-full bg-primary-container/20 text-primary-container font-telemetry-code text-telemetry-code flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[13px]">schema</span>
+          SYS-ARCH-v2.6
+        </span>
+<span class="px-space-sm py-space-xs rounded-full bg-secondary-container/20 text-secondary font-telemetry-code text-telemetry-code flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+          Tier 1-Yr Pro Ssemble Active
+        </span>
+<span class="px-space-sm py-space-xs rounded-full bg-tertiary-container/20 text-tertiary font-telemetry-code text-telemetry-code flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          Safe Harbor Ready ($0 Local FFmpeg)
+        </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Hybrid Pipeline Blueprint &amp; Execution Topology</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Pairing an unmetered zero-cost local rendering engine (FastAPI + FFmpeg + Edge Neural TTS) with Cloudflare-tunneled Ssemble AI cloud pipelines for dynamic meme styling, auto-reframe, and multi-track virality polishing.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" id="btnRefreshTunnel">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+        Ping Cloudflare Tunnel
+      </button>
+<button class="px-space-md py-space-sm rounded-full bg-primary-container hover:bg-primary-container/90 text-on-primary-fixed font-label-md text-label-md flex items-center gap-space-xs shadow-md transition-all" id="btnExportSpec">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+        Export OpenAPI &amp; Webhook Spec
+      </button>
+</div>
+</section>
+<!-- Interactive System Pipeline Topology -->
+<section class="bg-surface-container rounded-DEFAULT p-space-lg shadow-xl flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<span class="font-telemetry-code text-telemetry-code uppercase tracking-wider text-secondary">Interactive Topology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">End-to-End Automation Fabric</h3>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-xs rounded-full">
+<button class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface" id="topoModeAll">Full Hybrid Mesh</button>
+<button class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" id="topoModeLocalOnly">Safe Harbor Only (0 Credits)</button>
+<button class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" id="topoModeCloudOnly">Ssemble Cloud Hook</button>
+</div>
+</div>
+<!-- Interactive Node Map -->
+<div class="relative w-full bg-surface-container-lowest rounded-DEFAULT p-space-lg overflow-x-auto min-h-[300px] flex items-center">
+<!-- Background Signal Grid -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#9ccaff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+<div class="relative w-full min-w-[960px] flex items-center justify-between gap-space-md z-10">
+<!-- Node 1: Local FastAPI Engine -->
+<div class="flex-1 max-w-[210px] bg-surface-container-high rounded-DEFAULT p-space-md shadow-md flex flex-col gap-space-xs transition-all hover:scale-[1.02] cursor-pointer" id="nodeFastApi">
+<div class="flex items-center justify-between">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-telemetry-code text-telemetry-code text-tertiary">PORT 8000</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">terminal</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">FastAPI UI</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Local Python 3.11 orchestration, state dispatcher &amp; SQLite log</p>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest/60 rounded px-space-xs py-1 flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Uptime:</span>
+<span class="text-tertiary font-medium">99.98%</span>
+</div>
+</div>
+<!-- Flow Connector 1 -->
+<div class="flex flex-col items-center justify-center px-1">
+<span class="material-symbols-outlined text-secondary text-[20px] animate-pulse">arrow_forward</span>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">HTTP/JSON</span>
+</div>
+<!-- Node 2: Cloudflare Tunnel Bridge -->
+<div class="flex-1 max-w-[210px] bg-surface-container-high rounded-DEFAULT p-space-md shadow-md flex flex-col gap-space-xs transition-all hover:scale-[1.02] cursor-pointer" id="nodeCloudflare">
+<div class="flex items-center justify-between">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-telemetry-code text-telemetry-code text-secondary">ENCRYPTED</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">vpn_lock</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">CF Tunnel</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero-trust reverse proxy tunneling callbacks to webhook receptor</p>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest/60 rounded px-space-xs py-1 flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Tunnel:</span>
+<span class="text-secondary font-medium">ssemble-bridge</span>
+</div>
+</div>
+<!-- Flow Connector 2 -->
+<div class="flex flex-col items-center justify-center px-1">
+<span class="material-symbols-outlined text-secondary text-[20px] animate-pulse">arrow_forward</span>
+<span class="font-telemetry-code text-[10px] text-on-surface-variant">TLS 1.3</span>
+</div>
+<!-- Node 3: Ssemble Cloud Engine -->
+<div class="flex-1 max-w-[230px] bg-surface-container-high rounded-DEFAULT p-space-md shadow-md flex flex-col gap-space-xs transition-all hover:scale-[1.02] cursor-pointer ring-1 ring-secondary/30" id="nodeSsemble">
+<div class="flex items-center justify-between">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+<span class="font-telemetry-code text-telemetry-code text-secondary-fixed-dim">SUBSCRIPTION</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_videocam</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Ssemble Cloud</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">aiclipping.ssemble.com meme polishing, 9:16 crop &amp; audio effects</p>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest/60 rounded px-space-xs py-1 flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Quota Balance:</span>
+<span class="text-tertiary font-medium">840 / 1200 mins</span>
+</div>
+</div>
+<!-- Flow Connector 3 -->
+<div class="flex flex-col items-center justify-center px-1">
+<span class="material-symbols-outlined text-tertiary text-[20px] animate-pulse">arrow_forward</span>
+<span class="font-telemetry-code text-[10px] text-tertiary">OAUTH2</span>
+</div>
+<!-- Node 4: YouTube Data API v3 -->
+<div class="flex-1 max-w-[210px] bg-surface-container-high rounded-DEFAULT p-space-md shadow-md flex flex-col gap-space-xs transition-all hover:scale-[1.02] cursor-pointer" id="nodeYoutube">
+<div class="flex items-center justify-between">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-telemetry-code text-telemetry-code text-primary-container">SHORTS FEED</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">cloud_upload</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">YouTube API v3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct staging, scheduled release &amp; 2026 AI metadata verification</p>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest/60 rounded px-space-xs py-1 flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Daily Quota:</span>
+<span class="text-secondary font-medium">1,600 / 10,000</span>
+</div>
+</div>
+</div>
+<!-- Safe Harbor Fallback Path Rail -->
+<div class="absolute bottom-3 left-10 right-10 p-space-xs bg-surface-container-high/90 rounded-full flex items-center justify-between px-space-md border border-white/5" id="fallbackPathRail">
+<div class="flex items-center gap-space-xs font-telemetry-code text-telemetry-code text-tertiary">
+<span class="material-symbols-outlined text-[16px]">shield</span>
+<span>Zero-Cost Safe Harbor Loop: Local NVENC 60fps &amp; Edge-TTS (No tunnel or cloud credits required)</span>
+</div>
+<div class="flex items-center gap-space-sm font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Speed: <strong class="text-on-surface">0.18x real-time</strong></span>
+<span class="text-tertiary font-bold">0.00 $ Cost</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Simulator Playground -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Simulator Controls Panel -->
+<div class="lg:col-span-5 bg-surface-container rounded-DEFAULT p-space-lg shadow-xl flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-code text-telemetry-code uppercase tracking-wider text-secondary">Interactive Sandbox</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary/20 text-tertiary font-telemetry-code text-telemetry-code" id="simulatorBadge">Simulating: Hybrid Mode</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pipeline Dispatch Simulator</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Test video rendering throughput, billing liability, and output compliance across pipeline configurations.</p>
+<!-- Toggle Selector -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Select Dispatch Engine:</label>
+<div class="grid grid-cols-3 gap-space-xs p-1 bg-surface-container-lowest rounded-full">
+<button class="py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all text-center" id="simModeLocal">Local Only</button>
+<button class="py-space-xs rounded-full font-label-sm text-label-sm bg-primary-container text-white transition-all text-center shadow-sm" id="simModeHybrid">Hybrid Auto</button>
+<button class="py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all text-center" id="simModeCloud">Cloud Ssemble</button>
+</div>
+</div>
+<!-- Video Duration Slider -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Short Duration</span>
+<span class="font-telemetry-code text-telemetry-code text-secondary" id="durationVal">45 seconds</span>
+</div>
+<input class="w-full accent-secondary bg-surface-container-highest rounded-lg h-2 cursor-pointer" id="sliderDuration" max="60" min="15" type="range" value="45"/>
+</div>
+<!-- Video Complexity Options -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="accent-secondary rounded" id="chkSmartReframe" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">AI Smart Face Reframe</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="accent-secondary rounded" id="chkMemeOverlays" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Trending Meme Overlay</span>
+</label>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full py-space-sm rounded-full bg-secondary-container hover:bg-secondary-container/90 text-on-secondary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md transition-all" id="btnRunSimulation">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+        Run Simulated Render Benchmarks
+      </button>
+</div>
+<!-- Simulator Telemetry Output Bento -->
+<div class="lg:col-span-7 bg-surface-container rounded-DEFAULT p-space-lg shadow-xl flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">speed</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Live Pipeline Metrics</h4>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Target Spec: 1080x1920 @ 60 FPS</span>
+</div>
+<!-- Metric Tiles Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant uppercase">Est. Render Time</span>
+<span class="font-headline-md text-headline-md text-secondary" id="metricLatency">8.2s</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Local HW NVENC + Cloud Polish</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant uppercase">Cloud Quota Cost</span>
+<span class="font-headline-md text-headline-md text-tertiary" id="metricCost">0.75 min</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Ssemble 1-Yr Quota pool</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant uppercase">Audio Compliance</span>
+<span class="font-headline-md text-headline-md text-on-surface" id="metricAudio">-14.0 LUFS</span>
+<span class="font-body-sm text-[11px] text-tertiary">True-Peak -1.0 dBFS</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant uppercase">Failover Status</span>
+<span class="font-headline-md text-headline-md text-tertiary" id="metricFailover">Safe Harbor</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Auto-fallback enabled</span>
+</div>
+</div>
+<!-- Real-time SVG Sparkline / Render Profile -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-on-surface-variant">GPU Memory &amp; Transcode Frame Cadence</span>
+<span class="text-secondary">NVENC 5.8 GB VRAM / 60.1 fps avg</span>
+</div>
+<div class="w-full h-16 flex items-end">
+<svg class="w-full h-14 overflow-visible text-secondary" preserveaspectratio="none" viewbox="0 0 400 60">
+<defs>
+<lineargradient id="metricGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="currentColor" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="currentColor" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,45 Q40,15 80,30 T160,20 T240,40 T320,10 T400,25 L400,60 L0,60 Z" fill="url(#metricGrad)"></path>
+<path d="M0,45 Q40,15 80,30 T160,20 T240,40 T320,10 T400,25" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Diagnostic Status String -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-high rounded px-space-md font-telemetry-code text-telemetry-code">
+<span class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          Dispatcher state: IDLE_LISTENING on 127.0.0.1:8000
+        </span>
+<span class="text-on-surface-variant opacity-70">Tunnel latency: 22ms via ORD Cloudflare Edge</span>
+</div>
+</div>
+</section>
+<!-- Deep Dive Architecture: 3 Core Pillars Section -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-telemetry-code text-telemetry-code uppercase tracking-wider text-secondary">Engineering Deep Dive</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">The 3 Structural Pillars</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" id="tabBtn1">Pillar 1: Local Safe Harbor</button>
+<button class="px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" id="tabBtn2">Pillar 2: Ssemble Cloud AI</button>
+<button class="px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" id="tabBtn3">Pillar 3: Ssemble URL Clipper</button>
+</div>
+</div>
+<!-- Pillar 1 Card Content -->
+<div class="pillar-card grid grid-cols-1 lg:grid-cols-12 gap-space-lg bg-surface-container rounded-DEFAULT p-space-lg shadow-xl" id="pillarCard1">
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-xs rounded-full bg-tertiary-container/20 text-tertiary font-telemetry-code text-telemetry-code">0 Cloud Credits Consumed</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface font-telemetry-code text-telemetry-code">Unmetered Sovereign Engine</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Pillar 1: Local Studio &amp; Zero-Cost Safe Harbor</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            The foundation of our architecture safeguards operations against cloud API rate-limits, monthly export exhaustion, and connectivity outages. The entire Shorts pipeline runs locally on your workstation without paying a single cent in inference fees.
+          </p>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span><strong>Hardware-Accelerated FFmpeg 6.1:</strong> Direct NVENC/VAAPI rendering at 1080x1920 60fps vertical resolution.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span><strong>Edge-TTS Neural Voice Generator:</strong> Unlimited free voice synthesis via Microsoft's neural edge endpoints without token ceilings.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span><strong>ASS Subtitle Engine:</strong> Millisecond-exact karaoke animated subtitles burned directly into the video stream.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span><strong>Integrated EBU R128 Normalizer:</strong> Automatic gain leveling matching YouTube's exact -14 LUFS requirement.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">terminal</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Local Engine Binary</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">src/engine/ffmpeg_composer.py</span>
+</div>
+</div>
+<span class="px-space-md py-space-xs rounded-full bg-tertiary-container/30 text-tertiary font-telemetry-code text-telemetry-code">Active &amp; Ready</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-low rounded-DEFAULT p-space-md gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">LOCAL SPEC BENCHMARKS</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">speed</span>
+</div>
+<div class="relative w-full aspect-[9/10] max-h-72 rounded-DEFAULT overflow-hidden bg-surface-container-lowest">
+<img class="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity" data-alt="A clean dark high-tech terminal preview showing hardware NVENC FFmpeg video composition with glowing waveforms, green telemetry terminal lines, and audio master meters on an OLED dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA93dK61ZLkk9k9iBeShaf4DFZsjuQxjzj4SQ4t_FMCCObh6a9Kv03Wa_XRNGVHnDmLed9LmGGIHxCGw1aTpJWdq3tG7W1K3SGTbxkxyzL3X6cGJ0mKahorVrySUP-4mDHbvDPv0bjEnlh3eZD2QZxjshrRzXPBalnx-7Y_6NzZGwEFSRztzixR2XUiVq9Y_Bwc2EmuBL5Y79zUT19BcpCgKyhb0PJz82fjoYTYV5VjcI0XuPajIh5yzQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent flex items-end p-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Zero-Cost Pipeline</span>
+<span class="font-telemetry-code text-telemetry-code text-tertiary">0.00ms Network Roundtrip</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs text-center font-telemetry-code text-telemetry-code">
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<div class="text-on-surface font-bold">1080x1920</div>
+<div class="text-on-surface-variant text-[10px]">9:16 Canvas</div>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<div class="text-tertiary font-bold">0.00 $</div>
+<div class="text-on-surface-variant text-[10px]">Cost / 1,000 Clips</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pillar 2 Card Content -->
+<div class="pillar-card hidden grid-cols-1 lg:grid-cols-12 gap-space-lg bg-surface-container rounded-DEFAULT p-space-lg shadow-xl" id="pillarCard2">
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-xs rounded-full bg-secondary-container/20 text-secondary font-telemetry-code text-telemetry-code">Cloudflare Tunnel Bridge</span>
+<span class="px-space-sm py-space-xs rounded-full bg-primary-container/20 text-primary-container font-telemetry-code text-telemetry-code">1-Year Subscription Sync</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Pillar 2: Ssemble Cloud AI (Template Engine &amp; Polisher)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When high production polish is demanded, your local rough cut is encrypted, proxied through a dedicated Cloudflare tunnel to Ssemble's cloud cluster. Ssemble enriches the composition with licensed sound effects, dynamic b-roll overlays, kinetic meme stickers, and viral motion hooks.
+          </p>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span><strong>Cloudflare Tunnel Proxy:</strong> Exposes local FastAPI webhooks securely to receive render completion payloads without public static IPs.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span><strong>Licensed Audio &amp; SFX Injection:</strong> Automatic placement of trending whoosh, riser, and impact sound effects on text triggers.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span><strong>Auto-Meme Overlay Engine:</strong> Context-aware reaction animations positioned dynamically above subtitle boundaries.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span><strong>Direct SQLite Asset Archive:</strong> Master MP4 renders and XML project manifests sync back to the studio library in real-time.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">cloud_sync</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Tunnel Endpoint Target</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">https://bridge.creator-pipeline.internal/ssemble/webhook</span>
+</div>
+</div>
+<span class="px-space-md py-space-xs rounded-full bg-secondary-container/30 text-secondary font-telemetry-code text-telemetry-code">Tunnel Active</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-low rounded-DEFAULT p-space-md gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">TEMPLATE POLISHER PREVIEW</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">auto_fix_high</span>
+</div>
+<div class="relative w-full aspect-[9/10] max-h-72 rounded-DEFAULT overflow-hidden bg-surface-container-lowest">
+<img class="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity" data-alt="A modern vertical smartphone short screen showing automated kinetic typography, vibrant floating meme stickers, animated zoom transitions, and audio visualizer layers in YouTube Shorts format" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSmeI8LulKHtVUH6bXwkLXvPFxpxUpdhO1AkrJxT8XsEQWNftzYDwb8TBZgiI0PbXz8ihhPYC2okvpG7nJx5_nqimsHvdbNUtyNhKJA0sOVLCww6KDRhvKAmcC8aecYftiKY_Oic-irKmonGcGpaJepsdmwu1U4FleeW8j5bkKtQ1UWBBLvuIdqXSlB1snc62W4pwZXi9IGHK3RqdgBbCQIPMOSriZzb7YnRLitFDUdneFwU-QDTEl2w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent flex items-end p-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Kinetic Meme Hook</span>
+<span class="font-telemetry-code text-telemetry-code text-secondary">Ssemble Pro Layer v4</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs text-center font-telemetry-code text-telemetry-code">
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<div class="text-on-surface font-bold">+18.4%</div>
+<div class="text-on-surface-variant text-[10px]">Avg Retention Boost</div>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<div class="text-secondary font-bold">1 Credit/min</div>
+<div class="text-on-surface-variant text-[10px]">Pro Export Cost</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pillar 3 Card Content -->
+<div class="pillar-card hidden grid-cols-1 lg:grid-cols-12 gap-space-lg bg-surface-container rounded-DEFAULT p-space-lg shadow-xl" id="pillarCard3">
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-xs rounded-full bg-secondary-container/20 text-secondary font-telemetry-code text-telemetry-code">aiclipping.ssemble.com</span>
+<span class="px-space-sm py-space-xs rounded-full bg-tertiary-container/20 text-tertiary font-telemetry-code text-telemetry-code">Intelligent Extraction</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Pillar 3: Ssemble URL Clipper (Long-Form to Shorts)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Transform any existing 60-minute podcast, developer keynote, or video lecture URL into viral 45-second Shorts with zero manual cutting. Ssemble's AI identifies the highest sentiment velocity segments and dynamically frames active speakers.
+          </p>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">crop_free</span>
+<span><strong>Face-Tracking 9:16 Reframe:</strong> Computer vision calculates active speakers, splitting horizontal multicam feeds into stacked vertical compositions.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">query_stats</span>
+<span><strong>Top 3 Viral Hook Scorer:</strong> Transcribes audio, analyzes punchlines, and ranks sections with retention probabilities over 85%.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">auto_stories</span>
+<span><strong>Automated Click Hooks:</strong> Formats curiosity-inducing title cards and intros matching modern Shorts pacing conventions.</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">sync_alt</span>
+<span><strong>Studio Library Sync:</strong> Completed cuts directly hydrate Tab 2 (Shorts Library) tagged with source timestamps and transcripts.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">link</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Direct Clipper Pipeline</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">aiclipping.ssemble.com/api/v1/extract</span>
+</div>
+</div>
+<span class="px-space-md py-space-xs rounded-full bg-secondary-container/30 text-secondary font-telemetry-code text-telemetry-code">API Connected</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-low rounded-DEFAULT p-space-md gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">AUTO-REFRAME VISUALIZATION</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">face</span>
+</div>
+<div class="relative w-full aspect-[9/10] max-h-72 rounded-DEFAULT overflow-hidden bg-surface-container-lowest">
+<img class="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity" data-alt="Visual diagram showing horizontal widescreen 16:9 podcast studio camera footage dynamically tracked by bounding boxes and converted into two vertically stacked 9:16 Shorts views with subtitles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUrPz7qtNagqY9PHrwbbUV5NFrWy6i1CVrTs9QvQ_3Z2vrHx2rRrfCNG0q8NylQLh_-CaujMs0eUWR-hiz2a3hx_eb9l6dMjxVm3uoC0bcmZGJpoLz51nM5p7NmCleu7Br3Nt2fIq_N5CBTb_w9UqCFCfreAQbHVdKS-FEfvhZK8C_x4YiqWiJ888k2ChHf8zW4PINIRsFIQjf5C8FPdNBtN116HEU8BbScCFfB_S4JtHMMLX0YFlF1g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent flex items-end p-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dual Speaker Reframe</span>
+<span class="font-telemetry-code text-telemetry-code text-secondary">AI Spatial Tracking</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs text-center font-telemetry-code text-telemetry-code">
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<div class="text-on-surface font-bold">Top 3 Clips</div>
+<div class="text-on-surface-variant text-[10px]">Per Long-Form URL</div>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<div class="text-tertiary font-bold">180s Total</div>
+<div class="text-on-surface-variant text-[10px]">Extraction Pipeline</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- URL Clipper Test Sandbox Section -->
+<section class="bg-surface-container rounded-DEFAULT p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">content_cut</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Ssemble URL Clipper Quick-Extract</h4>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">aiclipping.ssemble.com • Long-form YouTube to Viral Shorts</span>
+</div>
+</div>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface-variant font-telemetry-code text-telemetry-code">Auto-Detect Active Speakers</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant text-[18px]">smart_display</span>
+<input class="w-full bg-surface-container-lowest pl-10 pr-space-md py-space-sm rounded-DEFAULT text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary" id="inputClipperUrl" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ (Podcasts, Lectures, Tech Talks)" type="url" value="https://www.youtube.com/watch?v=2tXh3w_A9aM"/>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-space-sm rounded-full bg-primary-container text-white font-label-md text-label-md shrink-0 flex items-center justify-center gap-space-xs hover:bg-primary-container/90 transition-all shadow-md" id="btnTriggerClipper">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+        Analyze &amp; Extract Top 3 Shorts
+      </button>
+</div>
+<!-- Extraction Results Drawer (Simulated) -->
+<div class="hidden grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs" id="clipperResultDrawer">
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-tertiary">Clip #1 • 94% Retention Score</span>
+<span class="text-on-surface-variant">04:12 - 04:58</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface mt-1 line-clamp-2">"The exact moment the server cluster failed at 3AM"</div>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Dual Face Reframe</span>
+<button class="px-space-sm py-1 rounded bg-surface-container text-secondary hover:bg-secondary-container hover:text-white font-label-sm text-label-sm transition-all">Send to Library</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-tertiary">Clip #2 • 89% Retention Score</span>
+<span class="text-on-surface-variant">18:40 - 19:22</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface mt-1 line-clamp-2">"Why you should never rewrite your database in Rust"</div>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Single Speaker Zoom</span>
+<button class="px-space-sm py-1 rounded bg-surface-container text-secondary hover:bg-secondary-container hover:text-white font-label-sm text-label-sm transition-all">Send to Library</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-tertiary">Clip #3 • 86% Retention Score</span>
+<span class="text-on-surface-variant">41:05 - 41:50</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface mt-1 line-clamp-2">"The secret to generating 1,000 views in 10 minutes"</div>
+<div class="flex items-center justify-between mt-space-sm">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Kinetic Meme Hook</span>
+<button class="px-space-sm py-1 rounded bg-surface-container text-secondary hover:bg-secondary-container hover:text-white font-label-sm text-label-sm transition-all">Send to Library</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Terminal & Environment Execution Guide -->
+<section class="bg-surface-container rounded-DEFAULT p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-telemetry-code text-telemetry-code uppercase tracking-wider text-secondary">Local Execution Environment</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">3-Tier Daemon Startup Reference</h4>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Windows 11 / macOS / Ubuntu 22.04 LTS</span>
+</div>
+<!-- Code Terminal Blocks Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Terminal 1 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface">Daemon 1: FastAPI Core</span>
+</div>
+<button class="btnCopyCode p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" data-code="python -m uvicorn src.ui.server:app --port 8000 --reload">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<pre class="bg-surface-container-high/60 p-space-sm rounded font-telemetry-code text-[12px] text-tertiary overflow-x-auto select-all">python -m uvicorn src.ui.server:app --port 8000 --reload</pre>
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Port: <strong>:8000</strong></span>
+<span>Status: <strong>Running (PID 48210)</strong></span>
+</div>
+</div>
+<!-- Terminal 2 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface">Daemon 2: Next.js Studio</span>
+</div>
+<button class="btnCopyCode p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" data-code="npm.cmd --prefix web run dev">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<pre class="bg-surface-container-high/60 p-space-sm rounded font-telemetry-code text-[12px] text-secondary overflow-x-auto select-all">npm.cmd --prefix web run dev</pre>
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Port: <strong>:3000</strong></span>
+<span>Fast Refresh: <strong>Active</strong></span>
+</div>
+</div>
+<!-- Terminal 3 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface">Daemon 3: Ssemble Bridge</span>
+</div>
+<button class="btnCopyCode p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" data-code="cloudflared tunnel run ssemble-bridge">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<pre class="bg-surface-container-high/60 p-space-sm rounded font-telemetry-code text-[12px] text-primary overflow-x-auto select-all">cloudflared tunnel run ssemble-bridge</pre>
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code text-on-surface-variant">
+<span>Tunnel ID: <strong>9fa3-e281...</strong></span>
+<span>Edges: <strong>2 active</strong></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Toast Notification Container for Copies and Pings -->
+<div class="fixed bottom-6 right-6 hidden bg-surface-container-highest text-on-surface px-space-md py-space-sm rounded-DEFAULT shadow-xl font-label-md text-label-md flex items-center gap-space-xs z-50 transition-all" id="archToast">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span id="toastMsg">Command copied to clipboard</span>
+</div>
+<script>
+    // Tab switching for 3 Core Pillars
+    const tabBtns = [
+      document.getElementById('tabBtn1'),
+      document.getElementById('tabBtn2'),
+      document.getElementById('tabBtn3')
+    ];
+    const pillarCards = [
+      document.getElementById('pillarCard1'),
+      document.getElementById('pillarCard2'),
+      document.getElementById('pillarCard3')
+    ];
+
+    tabBtns.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach((b, i) => {
+          if (i === index) {
+            b.className = 'px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors';
+            pillarCards[i].classList.remove('hidden');
+            pillarCards[i].classList.add('grid');
+          } else {
+            b.className = 'px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors';
+            pillarCards[i].classList.add('hidden');
+            pillarCards[i].classList.remove('grid');
+          }
+        });
+      });
+    });
+
+    // Copy to clipboard triggers
+    const toast = document.getElementById('archToast');
+    const toastMsg = document.getElementById('toastMsg');
+    function showToast(text) {
+      toastMsg.textContent = text;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2500);
+    }
+
+    document.querySelectorAll('.btnCopyCode').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.getAttribute('data-code');
+        navigator.clipboard.writeText(code).then(() => {
+          showToast('Copied: ' + code);
+        });
+      });
+    });
+
+    // Ping Tunnel Simulation
+    document.getElementById('btnRefreshTunnel').addEventListener('click', () => {
+      showToast('Cloudflare Tunnel: 200 OK (22ms roundtrip)');
+    });
+
+    document.getElementById('btnExportSpec').addEventListener('click', () => {
+      showToast('Downloaded openapi_ssemble_webhook.json');
+    });
+
+    // Topology Filter Toggles
+    const btnTopoAll = document.getElementById('topoModeAll');
+    const btnTopoLocal = document.getElementById('topoModeLocalOnly');
+    const btnTopoCloud = document.getElementById('topoModeCloudOnly');
+    const nodeSsemble = document.getElementById('nodeSsemble');
+    const nodeCloudflare = document.getElementById('nodeCloudflare');
+    const fallbackPathRail = document.getElementById('fallbackPathRail');
+
+    function resetTopoBtns() {
+      [btnTopoAll, btnTopoLocal, btnTopoCloud].forEach(b => {
+        b.className = 'px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface';
+      });
+    }
+
+    btnTopoAll.addEventListener('click', () => {
+      resetTopoBtns();
+      btnTopoAll.className = 'px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface';
+      nodeSsemble.style.opacity = '1';
+      nodeCloudflare.style.opacity = '1';
+      fallbackPathRail.style.opacity = '1';
+    });
+
+    btnTopoLocal.addEventListener('click', () => {
+      resetTopoBtns();
+      btnTopoLocal.className = 'px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface';
+      nodeSsemble.style.opacity = '0.35';
+      nodeCloudflare.style.opacity = '0.35';
+      fallbackPathRail.style.opacity = '1';
+      showToast('Switched view to Zero-Cost Safe Harbor Path');
+    });
+
+    btnTopoCloud.addEventListener('click', () => {
+      resetTopoBtns();
+      btnTopoCloud.className = 'px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface';
+      nodeSsemble.style.opacity = '1';
+      nodeCloudflare.style.opacity = '1';
+      fallbackPathRail.style.opacity = '0.4';
+      showToast('Switched view to Cloud Ssemble Integration Path');
+    });
+
+    // Simulator Interactive State Machine
+    const simLocal = document.getElementById('simModeLocal');
+    const simHybrid = document.getElementById('simModeHybrid');
+    const simCloud = document.getElementById('simModeCloud');
+    const simBadge = document.getElementById('simulatorBadge');
+    const sliderDuration = document.getElementById('sliderDuration');
+    const durationVal = document.getElementById('durationVal');
+    const metricLatency = document.getElementById('metricLatency');
+    const metricCost = document.getElementById('metricCost');
+    const metricAudio = document.getElementById('metricAudio');
+    const metricFailover = document.getElementById('metricFailover');
+    const btnRunSim = document.getElementById('btnRunSimulation');
+
+    let currentMode = 'hybrid';
+
+    function setSimMode(mode) {
+      currentMode = mode;
+      simLocal.className = 'py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all text-center';
+      simHybrid.className = 'py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all text-center';
+      simCloud.className = 'py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all text-center';
+
+      if (mode === 'local') {
+        simLocal.className = 'py-space-xs rounded-full font-label-sm text-label-sm bg-tertiary-container text-white transition-all text-center shadow-sm';
+        simBadge.textContent = 'Simulating: Safe Harbor (Local Only)';
+        simBadge.className = 'px-space-sm py-0.5 rounded-full bg-tertiary/20 text-tertiary font-telemetry-code text-telemetry-code';
+        metricLatency.textContent = '4.1s';
+        metricCost.textContent = '0.00 min';
+        metricCost.className = 'font-headline-md text-headline-md text-tertiary';
+        metricFailover.textContent = 'Active Engine';
+      } else if (mode === 'hybrid') {
+        simHybrid.className = 'py-space-xs rounded-full font-label-sm text-label-sm bg-primary-container text-white transition-all text-center shadow-sm';
+        simBadge.textContent = 'Simulating: Hybrid Auto-Failover';
+        simBadge.className = 'px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary-container font-telemetry-code text-telemetry-code';
+        metricLatency.textContent = '8.2s';
+        metricCost.textContent = (sliderDuration.value / 60).toFixed(2) + ' min';
+        metricCost.className = 'font-headline-md text-headline-md text-secondary';
+        metricFailover.textContent = 'Safe Harbor Ready';
+      } else if (mode === 'cloud') {
+        simCloud.className = 'py-space-xs rounded-full font-label-sm text-label-sm bg-secondary text-on-secondary font-medium transition-all text-center shadow-sm';
+        simBadge.textContent = 'Simulating: Ssemble Cloud Exclusive';
+        simBadge.className = 'px-space-sm py-0.5 rounded-full bg-secondary/20 text-secondary font-telemetry-code text-telemetry-code';
+        metricLatency.textContent = '12.4s';
+        metricCost.textContent = (sliderDuration.value / 60).toFixed(2) + ' min';
+        metricCost.className = 'font-headline-md text-headline-md text-secondary';
+        metricFailover.textContent = 'Disabled';
+      }
+    }
+
+    simLocal.addEventListener('click', () => setSimMode('local'));
+    simHybrid.addEventListener('click', () => setSimMode('hybrid'));
+    simCloud.addEventListener('click', () => setSimMode('cloud'));
+
+    sliderDuration.addEventListener('input', (e) => {
+      const val = e.target.value;
+      durationVal.textContent = val + ' seconds';
+      if (currentMode === 'local') {
+        metricLatency.textContent = (val * 0.09).toFixed(1) + 's';
+        metricCost.textContent = '0.00 min';
+      } else if (currentMode === 'hybrid') {
+        metricLatency.textContent = (val * 0.18).toFixed(1) + 's';
+        metricCost.textContent = (val / 60).toFixed(2) + ' min';
+      } else {
+        metricLatency.textContent = (val * 0.28).toFixed(1) + 's';
+        metricCost.textContent = (val / 60).toFixed(2) + ' min';
+      }
+    });
+
+    btnRunSim.addEventListener('click', () => {
+      btnRunSim.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Dispatching pipeline...';
+      btnRunSim.disabled = true;
+      setTimeout(() => {
+        btnRunSim.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> Render Complete (1080x1920 60fps)';
+        btnRunSim.classList.remove('bg-secondary-container');
+        btnRunSim.classList.add('bg-tertiary-container', 'text-white');
+        showToast('Telemetry validated: Video synthesized successfully!');
+        setTimeout(() => {
+          btnRunSim.innerHTML = '<span class="material-symbols-outlined text-[18px]">play_circle</span> Run Simulated Render Benchmarks';
+          btnRunSim.classList.add('bg-secondary-container');
+          btnRunSim.classList.remove('bg-tertiary-container', 'text-white');
+          btnRunSim.disabled = false;
+        }, 2200);
+      }, 1200);
+    });
+
+    // Ssemble URL Clipper Drawer Trigger
+    const btnClipper = document.getElementById('btnTriggerClipper');
+    const drawerClipper = document.getElementById('clipperResultDrawer');
+
+    btnClipper.addEventListener('click', () => {
+      btnClipper.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> Ingesting audio...';
+      setTimeout(() => {
+        btnClipper.innerHTML = '<span class="material-symbols-outlined text-[16px]">bolt</span> Analyze &amp; Extract Top 3 Shorts';
+        drawerClipper.classList.remove('hidden');
+        drawerClipper.classList.add('grid');
+        showToast('3 High-retention clips extracted and reframed!');
+      }, 1400);
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest/80 backdrop-blur-md py-space-lg"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-md font-telemetry-code text-telemetry-code text-on-surface-variant"><div>FastAPI v2.4 + Next.js 16 • Local FFmpeg 6.1 • SQLite telemetry • YouTube Data API v3</div><div class="flex items-center gap-space-lg"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">API Docs</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Port 8000 Swagger</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">GitHub</a></div></div></footer></body></html>

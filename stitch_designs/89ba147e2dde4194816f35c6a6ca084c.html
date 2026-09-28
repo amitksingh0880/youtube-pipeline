@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>YouTube Shorts Studio</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#005316","on-secondary":"#003257","on-secondary-fixed-variant":"#00497b","on-primary-fixed":"#410006","tertiary-fixed-dim":"#69df70","on-tertiary-container":"#00320a","on-primary-fixed-variant":"#930019","background":"#131313","outline-variant":"#5f3e3d","error":"#ffb4ab","on-surface":"#e5e2e1","tertiary-container":"#2ba640","surface-container-low":"#1c1b1b","inverse-surface":"#e5e2e1","surface":"#131313","on-tertiary":"#00390d","inverse-primary":"#bf0024","tertiary":"#69df70","secondary-container":"#2295ed","error-container":"#93000a","surface-container-highest":"#353534","primary":"#ffb3af","on-surface-variant":"#e9bcb9","surface-variant":"#353534","secondary-fixed-dim":"#9ccaff","on-secondary-container":"#002b4c","surface-dim":"#131313","surface-container-lowest":"#0e0e0e","on-secondary-fixed":"#001d35","tertiary-fixed":"#85fc89","primary-fixed-dim":"#ffb3af","on-primary-container":"#5c000b","outline":"#b08784","on-primary":"#68000e","primary-fixed":"#ffdad8","on-error":"#690005","surface-bright":"#3a3939","surface-container-high":"#2a2a2a","primary-container":"#ff5357","on-tertiary-fixed":"#002105","secondary-fixed":"#d0e4ff","secondary":"#9ccaff","surface-container":"#201f1f","on-background":"#e5e2e1","inverse-on-surface":"#313030","on-error-container":"#ffdad6","surface-tint":"#ffb3af"},borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},spacing:{"space-sm":"0.5rem","gutter":"1rem","space-xl":"1.5rem","margin":"1.5rem","margin-mobile":"1rem","space-md":"0.75rem","gutter-mobile":"0.5rem","space-lg":"1rem","space-xs":"0.25rem"},fontFamily:{"label-md":["Inter"],"display-lg":["Roboto Flex"],"headline-sm":["Roboto Flex"],"body-md":["Roboto Flex"],"headline-lg":["Roboto Flex"],"label-lg":["Inter"],"body-lg":["Roboto Flex"],"telemetry-code":["Inter"],"headline-md":["Roboto Flex"],"label-sm":["Inter"],"body-sm":["Roboto Flex"],"headline-lg-mobile":["Roboto Flex"],"title-md":["Roboto Flex"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.5px","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.25px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0.1px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0.25px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"0px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.1px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.5px","fontWeight":"400"}],"telemetry-code":["11px",{"lineHeight":"14px","letterSpacing":"0.6px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"0px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.5px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.4px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"0px","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0.15px","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-14 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-white text-[18px]">play_arrow</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">YouTube Shorts Studio</span></div><div class="hidden xl:flex items-center gap-space-xs"><span class="px-space-sm py-space-xs rounded-full bg-secondary-container/20 text-secondary font-telemetry-code text-telemetry-code flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px]">auto_awesome</span>Gemini 2.0 Flash</span><span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface-variant font-telemetry-code text-telemetry-code flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px]">record_voice_over</span>Edge Neural TTS</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-telemetry-code text-telemetry-code text-on-surface">FFmpeg</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-telemetry-code text-telemetry-code text-on-surface">Cloudflare Tunnel</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span><span class="font-telemetry-code text-telemetry-code text-on-surface">Ssemble API</span></div></div><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low font-telemetry-code text-telemetry-code text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>FastAPI :8000</span><span class="opacity-40">|</span><span>Next.js :3000</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-10 w-full px-margin bg-surface-container-low/95 flex items-center justify-between gap-gutter overflow-x-auto"><div class="flex items-center gap-space-xl min-w-max"><div class="flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Total Created:</span><span class="text-tertiary font-label-md text-label-md">12</span><span class="text-on-surface-variant opacity-60">(SQLite archive)</span></div><div class="flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Today's Uploads:</span><span class="text-secondary font-label-md text-label-md">1/6</span><span class="text-on-surface-variant opacity-60">(Spam Safety)</span></div><div class="hidden md:flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Voice Engine:</span><span class="text-on-surface">Microsoft Edge Neural TTS ($0 unmetered)</span></div><div class="hidden lg:flex items-center gap-space-xs font-telemetry-code text-telemetry-code"><span class="text-on-surface-variant">Compliance:</span><span class="text-tertiary">2026 Aligned</span><span class="text-on-surface-variant opacity-60">(#Shorts altered flag)</span></div></div></div><div class="h-12 w-full px-margin bg-surface-container-lowest flex items-center overflow-x-auto"><nav class="flex items-center gap-space-xs min-w-max py-space-xs" data-active-classes="bg-surface-container text-on-surface font-label-md text-label-md shadow-sm"><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-colors bg-surface-container text-on-surface font-label-md text-label-md shadow-sm" data-path="studio-generator" href="#">Studio Generator</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="shorts-library" href="#">Shorts Library (12)</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="niche-intelligence" href="#">Niche Intelligence (15)</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ssemble-architecture" href="#">Ssemble Architecture</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="engine-diagnostics-pipeline-logs" href="#">Engine Diagnostics &amp; Pipeline Logs</a></nav></div></header><main class="w-full pt-36 px-margin pb-margin bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter w-full items-start">
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<section class="bg-surface-container rounded p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">category</span>
+<span class="font-title-md text-title-md text-on-surface">Target Niche Selection</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant bg-surface-container-highest px-space-xs py-[2px] rounded-full">15 Active Presets</span>
+</div>
+<div class="flex items-center gap-space-sm font-telemetry-code text-telemetry-code">
+<span class="px-space-xs py-[2px] rounded bg-surface-container-high text-tertiary">Speed: +5%</span>
+<span class="px-space-xs py-[2px] rounded bg-[#FFEA00]/20 text-[#FFEA00]">Hormozi Pop Yellow</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-high text-secondary">Hook: 1.8s</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-space-xs" id="niche-chips-container">
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-primary-container text-white shadow-[0_0_12px_rgba(255,83,87,0.35)]" data-niche="Dark History" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Dark History</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Tech &amp; AI" type="button">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>Tech &amp; AI</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Psychology" type="button">
+<span class="material-symbols-outlined text-[14px]">neurology</span>
+<span>Psychology</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Space Science" type="button">
+<span class="material-symbols-outlined text-[14px]">rocket_launch</span>
+<span>Space Science</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Finance" type="button">
+<span class="material-symbols-outlined text-[14px]">candlestick_chart</span>
+<span>Finance</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="True Crime" type="button">
+<span class="material-symbols-outlined text-[14px]">fingerprint</span>
+<span>True Crime</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Fitness" type="button">
+<span class="material-symbols-outlined text-[14px]">fitness_center</span>
+<span>Fitness</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Cooking" type="button">
+<span class="material-symbols-outlined text-[14px]">skillet</span>
+<span>Cooking</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Travel" type="button">
+<span class="material-symbols-outlined text-[14px]">explore</span>
+<span>Travel</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Philosophy" type="button">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+<span>Philosophy</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Stoicism" type="button">
+<span class="material-symbols-outlined text-[14px]">stat_minus_1</span>
+<span>Stoicism</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Gaming Lore" type="button">
+<span class="material-symbols-outlined text-[14px]">sports_esports</span>
+<span>Gaming Lore</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Mythology" type="button">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Mythology</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Luxury &amp; Wealth" type="button">
+<span class="material-symbols-outlined text-[14px]">diamond</span>
+<span>Luxury &amp; Wealth</span>
+</button>
+<button class="niche-chip px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all flex items-center gap-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-niche="Biohacking" type="button">
+<span class="material-symbols-outlined text-[14px]">strikethrough_s</span>
+<span>Biohacking</span>
+</button>
+</div>
+</section>
+<section class="bg-surface-container rounded p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">precision_manufacturing</span>
+<span class="font-title-md text-title-md text-on-surface">Assembly Pipeline Mode</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-tertiary flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            Hardware Acceleration: NVENC active
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm" id="pipeline-modes">
+<label class="pipeline-card cursor-pointer rounded p-space-md bg-surface-container-high flex flex-col justify-between gap-space-sm relative transition-all shadow-sm">
+<div class="flex items-start justify-between">
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-tertiary bg-surface-container-lowest px-space-xs py-[2px] rounded-full">100% Free</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Local Studio</div>
+<div class="font-telemetry-code text-telemetry-code text-on-surface-variant mt-1 leading-relaxed">
+                $0 cost, 0 credits. FFmpeg native transcode, Edge-TTS audio stream, dynamic ASS karaoke subtitles.
+              </div>
+</div>
+<div class="font-telemetry-code text-telemetry-code text-secondary flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-[12px]">bolt</span>
+<span>Ultra-fast 1080x1920</span>
+</div>
+<input checked="" class="sr-only" name="pipeline-mode" type="radio" value="local"/>
+</label>
+<label class="pipeline-card cursor-pointer rounded p-space-md bg-surface-container-low hover:bg-surface-container-high flex flex-col justify-between gap-space-sm relative transition-all">
+<div class="flex items-start justify-between">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">cloud_sync</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-secondary-fixed-dim bg-surface-container-lowest px-space-xs py-[2px] rounded-full">Cloud Bridge</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Ssemble Cloud AI</div>
+<div class="font-telemetry-code text-telemetry-code text-on-surface-variant mt-1 leading-relaxed">
+                Rough-cut local render tunnelled to aiclipping.ssemble.com. Cloud meme hooks and licensed audio layers.
+              </div>
+</div>
+<div class="font-telemetry-code text-telemetry-code text-on-surface-variant/80 flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-[12px]">toll</span>
+<span>Consumes 1 token</span>
+</div>
+<input class="sr-only" name="pipeline-mode" type="radio" value="ssemble"/>
+</label>
+<label class="pipeline-card cursor-pointer rounded p-space-md bg-surface-container-low hover:bg-surface-container-high flex flex-col justify-between gap-space-sm relative transition-all">
+<div class="flex items-start justify-between">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">movie_filter</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant bg-surface-container-lowest px-space-xs py-[2px] rounded-full">Remix</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Trend Clipper</div>
+<div class="font-telemetry-code text-telemetry-code text-on-surface-variant mt-1 leading-relaxed">
+                Extract vertical highlight snippets from long-form YouTube URLs with auto facial framing.
+              </div>
+</div>
+<div class="font-telemetry-code text-telemetry-code text-on-surface-variant/80 flex items-center gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-[12px]">link</span>
+<span>yt-dlp + whisper</span>
+</div>
+<input class="sr-only" name="pipeline-mode" type="radio" value="clipper"/>
+</label>
+</div>
+</section>
+<section class="bg-surface-container rounded p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">travel_explore</span>
+<span class="font-title-md text-title-md text-on-surface">Topic Scout &amp; Live Research Gate</span>
+</div>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-sm text-label-sm flex items-center gap-space-xs transition-colors" id="scout-btn" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">refresh</span>
+<span>Scout Live Trends</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Seed Concept or Script Title</label>
+<div class="relative w-full">
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-md py-space-sm rounded focus:outline-none focus:bg-surface-container-lowest transition-colors pr-24 shadow-inner" id="topic-input" type="text" value="Project Acoustic Kitty: The CIA's $20M Spy Cat"/>
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1 font-telemetry-code text-telemetry-code text-secondary bg-surface-container-high px-space-xs py-[2px] rounded">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+<span>Gemini 2.0</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">One-Click High-Engagement Sparks:</span>
+<div class="flex flex-wrap gap-space-xs">
+<button class="trend-spark-chip px-space-sm py-[4px] rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-telemetry-code text-telemetry-code flex items-center gap-space-xs transition-colors text-left" data-title="Project Acoustic Kitty: The CIA's $20M Spy Cat" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Wikipedia: Project Acoustic Kitty (1960s Cold War)</span>
+</button>
+<button class="trend-spark-chip px-space-sm py-[4px] rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-telemetry-code text-telemetry-code flex items-center gap-space-xs transition-colors text-left" data-title="DeepSeek V3 Architecture: The Open Weights Revolution" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>HN Top: DeepSeek V3 Architecture</span>
+</button>
+<button class="trend-spark-chip px-space-sm py-[4px] rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-telemetry-code text-telemetry-code flex items-center gap-space-xs transition-colors text-left" data-title="Quantum Computing Breakthrough: Topological Qubits Explained" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Google Trends: Quantum Computing Breakthrough</span>
+</button>
+</div>
+</div>
+</section>
+<section class="bg-surface-container rounded p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[20px]">shield</span>
+<span class="font-title-md text-title-md text-on-surface">Safety &amp; Upload Preferences</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md items-center">
+<label class="flex items-center gap-space-sm p-space-sm rounded bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary bg-surface-container-highest accent-secondary cursor-pointer" id="dryrun-toggle" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Dry Run Mode</span>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">Inspect on disk before upload</span>
+</div>
+</label>
+<div class="flex flex-col gap-space-xs">
+<label class="font-telemetry-code text-telemetry-code text-on-surface-variant">Default Privacy</label>
+<select class="bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-sm py-space-xs rounded focus:outline-none focus:bg-surface-container-lowest">
+<option selected="" value="unlisted">Unlisted (Safe Preview)</option>
+<option value="private">Private (Restricted)</option>
+<option value="public">Public (Immediate Blast)</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-telemetry-code text-telemetry-code text-on-surface-variant">Target Category</label>
+<select class="bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-sm py-space-xs rounded focus:outline-none focus:bg-surface-container-lowest">
+<option selected="" value="27">Education &amp; Technology</option>
+<option value="28">Science &amp; Technology</option>
+<option value="24">Entertainment</option>
+<option value="25">News &amp; Politics</option>
+</select>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-high rounded p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Stage 6/7: Ken Burns &amp; ASS Burn-in</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-on-surface-variant">FFmpeg: filter_complex zoompan + subtitles=karaoke.ass (75% complete)</span>
+</div>
+<button class="px-space-xl py-space-sm rounded-full bg-primary-container hover:bg-primary-container/90 text-white font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-all shadow-[0_4px_16px_rgba(255,83,87,0.4)]" id="generate-trigger-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+<span>Generate YouTube Short</span>
+</button>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary-container h-full transition-all duration-500 rounded-full" id="pipeline-progress" style="width: 75%;"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-xs pt-space-xs font-telemetry-code text-telemetry-code">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>1. Viral Angle Formulated</span>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>2. Facts Verified via DuckDuckGo</span>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>3. 4-Act Script via Gemini 2.0</span>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>4. Narration (Edge Neural Guy)</span>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>5. HD B-roll Pulled &amp; Cached</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-semibold animate-pulse">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span>6. Reframe 9:16 &amp; ASS Sub Burn</span>
+</div>
+</div>
+</section>
+</div>
+<div class="xl:col-span-5 flex flex-col items-center gap-space-md w-full">
+<div class="w-full max-w-[380px] bg-surface-container-lowest rounded-[44px] p-3 shadow-2xl relative">
+<div class="w-full aspect-[9/16] rounded-[34px] overflow-hidden relative bg-black flex flex-col justify-between">
+<div class="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-1000 ease-out hover:scale-110" data-alt="Dark dramatic Cold War surveillance espionage scene from the 1960s with subtle motion blur, vintage microfilm lighting, deep charcoal tones, classified documents, and cinematic amber-blue volumetric spotlight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD96PxNLlAUbKuwDG4SbCe4OwIhO63h-E7CxeME1VDSxU6lzdgOBqmKBfjVYJFehNhayHtrYpJD2np-Bxgy2vgPlwbVchwTgMF3rXvywGre2FrPO2P8mRERFjfKZsH1r5JH9Lcy_1hvZ_Ga4gquTFgjiZYuv-fr_dz-Pa32tbzf2nciaFC0qosjLpNGWSr2QrA5ImPlPmlJv2yTzDr7-nGt6Fg_aZBRacBcVPOypEKQQQ3MWtTyX3vTWw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/60 pointer-events-none"></div>
+<div class="relative z-10 w-full p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="px-space-sm py-1 rounded-full bg-black/60 backdrop-blur-md text-white font-telemetry-code text-telemetry-code flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Edge-TTS • GuyNeural • -14 LUFS</span>
+</div>
+<div class="px-space-xs py-0.5 rounded bg-primary-container text-white font-telemetry-code text-telemetry-code">
+                #Shorts
+              </div>
+</div>
+<div class="flex items-center gap-1 w-24 h-4 px-1 rounded-full bg-black/40 backdrop-blur-sm">
+<span class="w-1 h-3 bg-secondary rounded-full animate-bounce"></span>
+<span class="w-1 h-4 bg-secondary rounded-full animate-bounce [animation-delay:0.1s]"></span>
+<span class="w-1 h-2 bg-secondary rounded-full animate-bounce [animation-delay:0.2s]"></span>
+<span class="w-1 h-4 bg-secondary rounded-full animate-bounce [animation-delay:0.3s]"></span>
+<span class="w-1 h-2 bg-secondary rounded-full animate-bounce [animation-delay:0.15s]"></span>
+<span class="w-1 h-3 bg-secondary rounded-full animate-bounce [animation-delay:0.25s]"></span>
+</div>
+</div>
+<div class="relative z-10 w-full px-6 text-center flex flex-col items-center">
+<div class="bg-black/80 px-4 py-2 rounded-lg backdrop-blur-md shadow-2xl">
+<p class="font-headline-md text-headline-md tracking-wide font-black uppercase text-white leading-tight">
+                THE CIA SPENT <span class="text-[#FFEA00] bg-black/90 px-1 rounded">$20 MILLION</span> TRAINING A CAT TO SPY ON SOVIETS...
+              </p>
+</div>
+</div>
+<div class="relative z-10 w-full p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between text-white font-telemetry-code text-telemetry-code">
+<div class="flex items-center gap-space-xs">
+<button class="w-7 h-7 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center text-white transition-colors" id="preview-play-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<span>0:14 / 0:48</span>
+</div>
+<span class="opacity-80">1080 × 1920 • 60fps</span>
+</div>
+<div class="w-full bg-white/20 h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[29%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-[380px] bg-surface-container rounded p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-on-surface">The CIA's $20M Spy Cat Failed #Shorts</div>
+<div class="font-telemetry-code text-telemetry-code text-secondary mt-0.5">#Shorts #History #ColdWar #CIA #DarkHistory</div>
+</div>
+<span class="px-space-xs py-[2px] rounded bg-tertiary-container/30 text-tertiary font-telemetry-code text-telemetry-code whitespace-nowrap">Ready on Disk</span>
+</div>
+<div class="bg-surface-container-low rounded p-space-xs font-telemetry-code text-telemetry-code text-on-surface-variant flex items-center justify-between">
+<span class="truncate">/outputs/render_9182.mp4</span>
+<span class="text-on-surface font-semibold ml-2">42.4 MB</span>
+</div>
+<button class="w-full py-space-sm rounded-full bg-primary-container hover:bg-primary-container/90 text-white font-label-md text-label-md flex items-center justify-center gap-space-xs transition-all shadow-[0_2px_12px_rgba(255,83,87,0.35)]" type="button">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span>Publish to YouTube (Data API v3)</span>
+</button>
+<div class="flex items-center justify-between font-telemetry-code text-telemetry-code pt-space-xs text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">link</span>
+            Direct Watch Link:
+          </span>
+<a class="text-secondary hover:underline truncate max-w-[180px]" href="#">https://youtu.be/dQw4w9WgXcQ</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+    (function initStudioGenerator() {
+      const topicInput = document.getElementById('topic-input');
+      const sparkChips = document.querySelectorAll('.trend-spark-chip');
+      const nicheChips = document.querySelectorAll('.niche-chip');
+      const scoutBtn = document.getElementById('scout-btn');
+      const generateBtn = document.getElementById('generate-trigger-btn');
+      const progressBar = document.getElementById('pipeline-progress');
+      const previewPlayBtn = document.getElementById('preview-play-btn');
+
+      sparkChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const title = chip.getAttribute('data-title');
+          if (title && topicInput) {
+            topicInput.value = title;
+            topicInput.classList.add('bg-surface-container-highest');
+            setTimeout(() => topicInput.classList.remove('bg-surface-container-highest'), 400);
+          }
+        });
+      });
+
+      nicheChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          nicheChips.forEach(c => {
+            c.classList.remove('bg-primary-container', 'text-white', 'shadow-[0_0_12px_rgba(255,83,87,0.35)]');
+            c.classList.add('bg-surface-container-high', 'text-on-surface');
+          });
+          chip.classList.remove('bg-surface-container-high', 'text-on-surface');
+          chip.classList.add('bg-primary-container', 'text-white', 'shadow-[0_0_12px_rgba(255,83,87,0.35)]');
+        });
+      });
+
+      if (scoutBtn) {
+        scoutBtn.addEventListener('click', () => {
+          const icon = scoutBtn.querySelector('.material-symbols-outlined');
+          if (icon) icon.classList.add('animate-spin');
+          setTimeout(() => {
+            if (icon) icon.classList.remove('animate-spin');
+          }, 800);
+        });
+      }
+
+      if (generateBtn && progressBar) {
+        generateBtn.addEventListener('click', () => {
+          progressBar.style.width = '100%';
+          generateBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Rendering Final Cut...</span>';
+          setTimeout(() => {
+            generateBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Ready for Preview</span>';
+            progressBar.style.width = '75%';
+          }, 1800);
+        });
+      }
+
+      if (previewPlayBtn) {
+        let playing = true;
+        previewPlayBtn.addEventListener('click', () => {
+          playing = !playing;
+          const icon = previewPlayBtn.querySelector('.material-symbols-outlined');
+          if (icon) icon.textContent = playing ? 'pause' : 'play_arrow';
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest/80 backdrop-blur-md py-space-lg"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-md font-telemetry-code text-telemetry-code text-on-surface-variant"><div>FastAPI v2.4 + Next.js 16 • Local FFmpeg 6.1 • SQLite telemetry • YouTube Data API v3</div><div class="flex items-center gap-space-lg"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">API Docs</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Port 8000 Swagger</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">GitHub</a></div></div></footer></body></html>

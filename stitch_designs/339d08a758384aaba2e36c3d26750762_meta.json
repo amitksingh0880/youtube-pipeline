@@ -1,0 +1,375 @@
+{
+  "screenshot": {
+    "name": "projects/17487078228924644298/screens/339d08a758384aaba2e36c3d26750762/fileEntries/screenshot",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UGvwY6Osb6VoxoaO2cuUA05AOLIMCsx737mfa_iIVNIiYC8F380faldugZ7wKTEaQqc3353oPYYDFGnTsSzBSty3LrO666_TyOjmGD2bScTrD4LIPwPPX3Ob4qz6HozrWFPD7vNLooufr2VdGaFQSyTwi7FIZN83dAncow-TBc9QeWRvUOgNX4ls1cA_so1PN-LwDlbMrWgilk0WopXG96u1CHkNN6GfCHysun4iB9gBxiJFzrBFa4s0gl"
+  },
+  "htmlCode": {
+    "name": "projects/17487078228924644298/screens/339d08a758384aaba2e36c3d26750762/fileEntries/html",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1YzdkNmZkNjc4MDgwN2M0ZTBlN2QwMWExOTQwEgsSBxD2_bLC6AcYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzQ4NzA3ODIyODkyNDY0NDI5OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "339d08a758384aaba2e36c3d26750762",
+  "generatedBy": "figaro_agent",
+  "width": "2560",
+  "height": "6372",
+  "title": "Niche Intelligence",
+  "prompt": "Material Design 3 & YouTube Studio Dark Theme for YouTube Shorts Studio - Tab 3: Niche Intelligence Explorer.\nComprehensive Niche Intelligence & Strategy Grid displaying all 15 niches with deep creator monetization & algorithmic telemetry:\n- Header overview:\n  - Section title: \"Niche Intelligence & RPM Engine\"\n  - Summary metrics: 15 Active Archetypes \u2022 Average RPM: $3.85 / 1K views \u2022 100% Zero-Copyright Safe B-Roll Rules\n  - Search / Category filter: High RPM, Viral Volume, Ultra-High RPM, Narrative Driven.\n- Grid of 15 Niche Profile Cards (e.g. 3-column responsive card grid):\n  1. Dark History:\n     - Badge: [High RPM \u2022 $4.20] | Audience: 18-34 Males, Global\n     - Voice: Edge-TTS 'ChristopherNeural' (Deep, documentary, serious cadence)\n     - Visual Style: Sepia/Desaturated archival b-roll, slow Ken Burns zoom-in, vintage film grain, high-contrast monochrome with gold accent highlights.\n     - Subtitle Style: Hormozi Bold Yellow (#FFE600), fast 1-word pop with 0.15s stagger.\n     - Pacing: 145 WPM, 4-act cold open hook under 2.2 seconds.\n     - Banned Clich\u00e9s: \"Did you know that...\", \"Have you ever wondered...\", generic smiling stock photos.\n     - Action Button: [\u26a1 Use This Niche in Generator]\n  2. Tech & AI:\n     - Badge: [Ultra-High RPM \u2022 $6.80] | Audience: Developers, Tech Enthusiasts, Founders\n     - Voice: 'GuyNeural' (Crisp, authoritative, fast-paced 160 WPM)\n     - Visual Style: Terminal captures, neon cyan/violet grid motion, high-res code diffs, schematic overlays.\n     - Subtitle Style: Cyan glow (#00F0FF) with monospace emphasis.\n     - Action Button: [\u26a1 Use This Niche in Generator]\n  3. Finance & Wealth:\n     - Badge: [Ultra-High RPM \u2022 $8.50] | Voice: 'EricNeural' | Visuals: Wall Street tickers, emerald green kinetic typography, currency macros.\n     - Action Button: [\u26a1 Use This Niche in Generator]\n  4. Psychology & Dark Mind:\n     - Badge: [Viral Volume \u2022 $3.10] | Voice: 'SoniaNeural' | Visuals: Macro pupil dilations, surreal liminal spaces, stark shadows.\n     - Action Button: [\u26a1 Use This Niche in Generator]\n  5. Space Science & Cosmic Horror:\n     - Badge: [High RPM \u2022 $4.50] | Voice: 'ChristopherNeural' | James Webb imagery, black hole renders, deep drone audio.\n  6. True Crime & Unsolved:\n     - Badge: [Viral Volume \u2022 $3.40] | Police logs, redaction tape effects, eerie pacing.\n  7. Philosophy & Stoicism:\n     - Badge: [High RPM \u2022 $4.10] | Marble statue 3D lighting, Marcus Aurelius quotes, solemn pacing.\n  8. Fitness & Biohacking, 9. Travel & Hidden Earth, 10. Luxury & Ultra-Wealth, 11. Gaming Lore, 12. Mythological Mysteries...\n- Bottom Drawer / Quick Comparison Bar:\n  - Direct comparison table of RPM vs Retention Rate vs Voice Pacing across top 5 niches.\n  - Clicking any \"Use This Niche\" button provides instant toast confirmation: \"Loaded Dark History into Studio Generator with 145 WPM and ChristopherNeural voice preset.\"",
+  "name": "projects/17487078228924644298/screens/339d08a758384aaba2e36c3d26750762",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "ROBOTO_FLEX",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ff0033",
+    "headlineFont": "ROBOTO_FLEX",
+    "bodyFont": "ROBOTO_FLEX",
+    "labelFont": "INTER",
+    "namedColors": {
+      "tertiary": "#69df70",
+      "tertiary_container": "#2ba640",
+      "tertiary_fixed": "#85fc89",
+      "secondary": "#9ccaff",
+      "surface_tint": "#ffb3af",
+      "inverse_surface": "#e5e2e1",
+      "on_tertiary": "#00390d",
+      "tertiary_fixed_dim": "#69df70",
+      "on_secondary_fixed_variant": "#00497b",
+      "outline_variant": "#5f3e3d",
+      "secondary_fixed": "#d0e4ff",
+      "inverse_on_surface": "#313030",
+      "on_primary_fixed_variant": "#930019",
+      "primary_fixed": "#ffdad8",
+      "surface_container_lowest": "#0e0e0e",
+      "secondary_fixed_dim": "#9ccaff",
+      "surface_bright": "#3a3939",
+      "on_tertiary_container": "#00320a",
+      "on_primary": "#68000e",
+      "on_secondary_fixed": "#001d35",
+      "inverse_primary": "#bf0024",
+      "secondary_container": "#2295ed",
+      "on_secondary": "#003257",
+      "on_surface": "#e5e2e1",
+      "error": "#ffb4ab",
+      "primary": "#ffb3af",
+      "surface_dim": "#131313",
+      "error_container": "#93000a",
+      "on_primary_fixed": "#410006",
+      "on_surface_variant": "#e9bcb9",
+      "background": "#131313",
+      "surface_container_high": "#2a2a2a",
+      "surface_container_highest": "#353534",
+      "primary_container": "#ff5357",
+      "on_error": "#690005",
+      "on_primary_container": "#5c000b",
+      "surface_variant": "#353534",
+      "on_background": "#e5e2e1",
+      "primary_fixed_dim": "#ffb3af",
+      "surface": "#131313",
+      "on_tertiary_fixed": "#002105",
+      "surface_container_low": "#1c1b1b",
+      "surface_container": "#201f1f",
+      "on_error_container": "#ffdad6",
+      "on_tertiary_fixed_variant": "#005316",
+      "on_secondary_container": "#002b4c",
+      "outline": "#b08784"
+    },
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#ff0033",
+    "overrideSecondaryColor": "#3ea6ff",
+    "overrideTertiaryColor": "#2ba640",
+    "overrideNeutralColor": "#0f0f0f",
+    "spacingScale": 2,
+    "typography": {
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "11px",
+        "fontWeight": "600",
+        "lineHeight": "16px",
+        "letterSpacing": "0.5px"
+      },
+      "body-sm": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "letterSpacing": "0.4px"
+      },
+      "headline-md": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "22px",
+        "fontWeight": "600",
+        "lineHeight": "28px",
+        "letterSpacing": "0px"
+      },
+      "display-lg": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "56px",
+        "fontWeight": "700",
+        "lineHeight": "64px",
+        "letterSpacing": "-0.25px"
+      },
+      "headline-sm": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "24px",
+        "letterSpacing": "0.1px"
+      },
+      "body-lg": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "letterSpacing": "0.5px"
+      },
+      "label-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "lineHeight": "20px",
+        "letterSpacing": "0.1px"
+      },
+      "title-md": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "lineHeight": "24px",
+        "letterSpacing": "0.15px"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "lineHeight": "16px",
+        "letterSpacing": "0.5px"
+      },
+      "headline-lg-mobile": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "26px",
+        "fontWeight": "600",
+        "lineHeight": "32px",
+        "letterSpacing": "0px"
+      },
+      "headline-lg": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "32px",
+        "fontWeight": "600",
+        "lineHeight": "40px",
+        "letterSpacing": "0px"
+      },
+      "telemetry-code": {
+        "fontFamily": "Inter",
+        "fontSize": "11px",
+        "fontWeight": "600",
+        "lineHeight": "14px",
+        "letterSpacing": "0.6px"
+      },
+      "body-md": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "letterSpacing": "0.25px"
+      }
+    },
+    "spacing": {
+      "gutter-mobile": "0.5rem",
+      "gutter": "1rem",
+      "margin-mobile": "1rem",
+      "space-xs": "0.25rem",
+      "margin": "1.5rem",
+      "space-xl": "1.5rem",
+      "space-md": "0.75rem",
+      "space-lg": "1rem",
+      "space-sm": "0.5rem"
+    },
+    "headlineFontFamily": "Roboto Flex",
+    "bodyFontFamily": "Roboto Flex",
+    "labelFontFamily": "Inter"
+  },
+  "deviceType": "DESKTOP",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "designSystem": {
+    "name": "assets/651c317258fd4c41893429591db88fd4",
+    "designSystem": {
+      "displayName": "Studio Redline",
+      "styleGuidelines": "## Brand & Style\n\nThis design system targets digital creators, technical video producers, and automation pipeline operators working within high-cadence short-form workflows. It synthesizes Google Material Design 3 surface models with the high-utility, dense operational hierarchy of YouTube Studio.\n\nThe visual direction centers on deep charcoal surfaces paired with the definitive, high-impact YouTube Red brand marker. Interface elements prioritize zero visual fatigue during prolonged sessions, instant visual parsing of telemetry pipelines (rendering, FFmpeg, transcode progress, AI assist states), and strict content-first display hierarchy. Content cards and video nodes take visual precedence over ambient chrome.\n\nStylistically, the system utilizes Material 3 tonal elevation and strict state layer tinting, calibrated specifically for high-contrast OLED/dark environments. Accents avoid gratuitous novelty, deploying intentional status hues (telemetry green, Gemini intelligence blue, transcode purple) strictly within compact badges and functional indicators.\n\n## Layout & Spacing\n\nThe structural layout utilizes a persistent 12-column adaptive fluid grid for desktop workspaces, shifting to 8 columns on tablet viewports and 4 columns on mobile capture/review viewports.\n\n- **Desktop (>= 1280px)**: Collapsible rail sidebar (72px collapsed, 240px expanded), 16px gutter spacing, fixed horizontal work canvas margins of 24px. Multi-panel timeline and preview layouts maintain independent internal scroll viewports.\n- **Tablet (600px - 1279px)**: Icon-only rail navigation (72px), 16px margins, dynamic responsive cards collapsing from multi-row arrangements to stacked inspect panes.\n- **Mobile (< 600px)**: 16px outer margin, 8px grid gutters, pinned bottom utility actions for rapid editing, upload tracking, and Shorts format monitoring.\n- **Spacing Rhythm**: Based strictly on a 4px/8px incremental rhythm. Micro-telemetry chips utilize `space-xs` (4px) internal gaps, while high-density studio inspection forms utilize `space-sm` (8px) and `space-md` (12px) stack offsets.\n\n## Elevation & Depth\n\nIn alignment with Material Design 3 dark theme specifications, physical depth is expressed primarily through **tonal surface layering** rather than drop shadows. Elevating a component shifts its background to a lighter charcoal container token.\n\n- **Level 0 (Canvas Base)**: `#0F0F0F` \u2014 Default screen background, grid layout foundation.\n- **Level 1 (Docked Structural Panels)**: `#181818` with subtle top/edge ghost divider (`rgba(255, 255, 255, 0.08)` 1px border). Applied to lateral sidebars, studio headers, and inactive dock shelves.\n- **Level 2 (Cards & Active Modules)**: `#212121`. Used for Shorts detail cards, performance charts, and video matrix grids. Shadows are strictly ambient: `0 4px 12px rgba(0, 0, 0, 0.4)`.\n- **Level 3 (Floating Controls & Popovers)**: `#282828`. Filter menus, action sheets, contextual batch drawers. Shadow: `0 8px 24px rgba(0, 0, 0, 0.6)`.\n- **Level 4 (Dialogs & Critical Previews)**: `#313131`. Modal video inspectors, FFmpeg log viewer overlays, upload queues.\n- **Borders & Dividers**: High-density developer viewports require crisp structural definition. Use `rgba(255, 255, 255, 0.1)` for horizontal rules and card separators; avoid heavy saturated strokes.\n\n## Components\n\n### Buttons\n- **Primary Brand Button**: High-emphasis action (`Publish`, `Upload Shorts`). Fill: `#FF0033` (YouTube Red); Text: `#FFFFFF` (`label-lg`); Shape: Pill (`9999px`). Hover state: `#EA3323` with 8% white overlay.\n- **Secondary Studio Button**: Fill: `rgba(255, 255, 255, 0.1)`; Text: `#F1F1F1`; Hover: `rgba(255, 255, 255, 0.2)`; Shape: Pill.\n- **Subtle / Text Button**: Transparent background; Text: `#3EA6FF` (Secondary Blue); Hover: `rgba(62, 166, 255, 0.08)`.\n\n### Chips & Telemetry Badges\n- **Studio Filter Chips**: Pill contour. Dormant: `#212121` surface, border `rgba(255, 255, 255, 0.12)`, text `#F1F1F1`. Selected: `#FFFFFF` fill, `#0F0F0F` text.\n- **FFmpeg Status Badge**: Height: 20px; Pill shape; Padding: `0 8px`; Background: `rgba(43, 166, 64, 0.15)`; Border: `1px solid rgba(43, 166, 64, 0.4)`; Text: `#2BA640` (`telemetry-code`). Features a 6px pulsating dot for active encoding pipelines.\n- **Gemini / AI Telemetry Badge**: Background: `rgba(62, 166, 255, 0.15)`; Border: `1px solid rgba(62, 166, 255, 0.3)`; Text: `#3EA6FF`; Icon: 12px sparkle indicator.\n- **Pipeline Metric Badge (Ssemble/Render)**: Background: `rgba(163, 112, 247, 0.15)`; Border: `1px solid rgba(163, 112, 247, 0.3)`; Text: `#A370F7`.\n\n### Cards & Media Items\n- **Shorts Grid Item**: Surface `#212121` with an inner 9:16 aspect ratio thumbnail preview container. Rounded to 8px. Top-right duration chip with `rgba(0, 0, 0, 0.8)` backdrop. Metadata footer below thumbnail displays high-emphasis title (`title-md`), view count metrics, transcode completion indicator, and a tertiary quick-action trigger menu.\n\n### Input Fields & Controls\n- **Studio Text Inputs**: Background: `#181818`; Border: `1px solid rgba(255, 255, 255, 0.2)`; Corner radius: 6px; Active state: `2px solid #3EA6FF` border.\n- **Checkboxes & Radios**: Unselected: `rgba(255, 255, 255, 0.5)` stroke; Selected: `#3EA6FF` fill with pure `#FFFFFF` icon check mark.\n\n### Transcode & Processing Progress\n- Continuous progress bars maintain a track background of `#383838` with a 4px track height. Processing state is filled with `#3EA6FF`; finalized video completion transitions fill to `#2BA640`. Error states flash `#FF0033`.",
+      "theme": {
+        "colorMode": "DARK",
+        "font": "ROBOTO_FLEX",
+        "roundness": "ROUND_FULL",
+        "customColor": "#ff0033",
+        "headlineFont": "ROBOTO_FLEX",
+        "bodyFont": "ROBOTO_FLEX",
+        "labelFont": "INTER",
+        "namedColors": {
+          "primary": "#ffb3af",
+          "primary_fixed_dim": "#ffb3af",
+          "secondary_fixed_dim": "#9ccaff",
+          "on_tertiary_fixed": "#002105",
+          "inverse_on_surface": "#313030",
+          "on_primary_fixed": "#410006",
+          "inverse_primary": "#bf0024",
+          "tertiary_fixed_dim": "#69df70",
+          "primary_fixed": "#ffdad8",
+          "on_error": "#690005",
+          "primary_container": "#ff5357",
+          "on_tertiary": "#00390d",
+          "tertiary_container": "#2ba640",
+          "surface_container": "#201f1f",
+          "secondary_container": "#2295ed",
+          "inverse_surface": "#e5e2e1",
+          "on_surface": "#e5e2e1",
+          "outline_variant": "#5f3e3d",
+          "tertiary_fixed": "#85fc89",
+          "secondary_fixed": "#d0e4ff",
+          "surface_bright": "#3a3939",
+          "on_secondary_fixed": "#001d35",
+          "error": "#ffb4ab",
+          "on_tertiary_container": "#00320a",
+          "on_primary": "#68000e",
+          "outline": "#b08784",
+          "surface_container_highest": "#353534",
+          "surface_tint": "#ffb3af",
+          "surface_container_high": "#2a2a2a",
+          "surface_dim": "#131313",
+          "background": "#131313",
+          "tertiary": "#69df70",
+          "on_surface_variant": "#e9bcb9",
+          "on_background": "#e5e2e1",
+          "surface": "#131313",
+          "error_container": "#93000a",
+          "on_primary_fixed_variant": "#930019",
+          "on_secondary_fixed_variant": "#00497b",
+          "surface_container_lowest": "#0e0e0e",
+          "on_primary_container": "#5c000b",
+          "on_error_container": "#ffdad6",
+          "secondary": "#9ccaff",
+          "on_secondary_container": "#002b4c",
+          "surface_variant": "#353534",
+          "on_tertiary_fixed_variant": "#005316",
+          "on_secondary": "#003257",
+          "surface_container_low": "#1c1b1b"
+        },
+        "designMd": "---\nname: Studio Redline\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#3a3939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#e9bcb9'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#b08784'\n  outline-variant: '#5f3e3d'\n  surface-tint: '#ffb3af'\n  primary: '#ffb3af'\n  on-primary: '#68000e'\n  primary-container: '#ff5357'\n  on-primary-container: '#5c000b'\n  inverse-primary: '#bf0024'\n  secondary: '#9ccaff'\n  on-secondary: '#003257'\n  secondary-container: '#2295ed'\n  on-secondary-container: '#002b4c'\n  tertiary: '#69df70'\n  on-tertiary: '#00390d'\n  tertiary-container: '#2ba640'\n  on-tertiary-container: '#00320a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad8'\n  primary-fixed-dim: '#ffb3af'\n  on-primary-fixed: '#410006'\n  on-primary-fixed-variant: '#930019'\n  secondary-fixed: '#d0e4ff'\n  secondary-fixed-dim: '#9ccaff'\n  on-secondary-fixed: '#001d35'\n  on-secondary-fixed-variant: '#00497b'\n  tertiary-fixed: '#85fc89'\n  tertiary-fixed-dim: '#69df70'\n  on-tertiary-fixed: '#002105'\n  on-tertiary-fixed-variant: '#005316'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  display-lg:\n    fontFamily: Roboto Flex\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: 64px\n    letterSpacing: -0.25px\n  headline-lg:\n    fontFamily: Roboto Flex\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n    letterSpacing: 0px\n  headline-lg-mobile:\n    fontFamily: Roboto Flex\n    fontSize: 26px\n    fontWeight: '600'\n    lineHeight: 32px\n    letterSpacing: 0px\n  headline-md:\n    fontFamily: Roboto Flex\n    fontSize: 22px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: 0px\n  headline-sm:\n    fontFamily: Roboto Flex\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 24px\n    letterSpacing: 0.1px\n  title-md:\n    fontFamily: Roboto Flex\n    fontSize: 16px\n    fontWeight: '500'\n    lineHeight: 24px\n    letterSpacing: 0.15px\n  body-lg:\n    fontFamily: Roboto Flex\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.5px\n  body-md:\n    fontFamily: Roboto Flex\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0.25px\n  body-sm:\n    fontFamily: Roboto Flex\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 16px\n    letterSpacing: 0.4px\n  label-lg:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\n    letterSpacing: 0.1px\n  label-md:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.5px\n  label-sm:\n    fontFamily: Inter\n    fontSize: 11px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.5px\n  telemetry-code:\n    fontFamily: Inter\n    fontSize: 11px\n    fontWeight: '600'\n    lineHeight: 14px\n    letterSpacing: 0.6px\nrounded:\n  sm: 0.5rem\n  DEFAULT: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 3rem\n  full: 9999px\nspacing:\n  gutter: 1rem\n  gutter-mobile: 0.5rem\n  margin: 1.5rem\n  margin-mobile: 1rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 0.75rem\n  space-lg: 1rem\n  space-xl: 1.5rem\n---\n\n## Brand & Style\n\nThis design system targets digital creators, technical video producers, and automation pipeline operators working within high-cadence short-form workflows. It synthesizes Google Material Design 3 surface models with the high-utility, dense operational hierarchy of YouTube Studio.\n\nThe visual direction centers on deep charcoal surfaces paired with the definitive, high-impact YouTube Red brand marker. Interface elements prioritize zero visual fatigue during prolonged sessions, instant visual parsing of telemetry pipelines (rendering, FFmpeg, transcode progress, AI assist states), and strict content-first display hierarchy. Content cards and video nodes take visual precedence over ambient chrome.\n\nStylistically, the system utilizes Material 3 tonal elevation and strict state layer tinting, calibrated specifically for high-contrast OLED/dark environments. Accents avoid gratuitous novelty, deploying intentional status hues (telemetry green, Gemini intelligence blue, transcode purple) strictly within compact badges and functional indicators.\n\n## Colors\n\nThe palette establishes an authentic YouTube Studio environment built on dark tonal containers rather than absolute black, reserving pure `#000000` for video canvas zones and negative space.\n\n### Functional Roles\n- **Primary (`#FF0033` / `#EA3323`)**: YouTube Signature Red. Reserved strictly for primary callouts, recording states, active publishing triggers, and key brand anchors. Never applied across expansive surface backgrounds.\n- **Secondary (`#3EA6FF`)**: Studio Action Blue / Gemini Intelligence. Directs interactive text buttons, verified telemetry chips, active tabs, AI-assisted tooling, and standard hyperlink states.\n- **Tertiary (`#2BA640`)**: Telemetry Emerald. Designates FFmpeg hardware encode active status, processing completion, live stream health, and monetization clearance.\n- **Accent Purple (`#A370F7`)**: Pipeline / Ssemble synthesis pipelines, dynamic effects rendering, and specialized creator tools.\n- **Neutral Canvas (`#0F0F0F`)**: Core canvas base.\n- **Surface Containers**:\n  - `surface-container-low`: `#181818` (Sidebar panels, dormant toolbars)\n  - `surface-container`: `#212121` (Standard cards, modal surfaces)\n  - `surface-container-high`: `#282828` (Hover states, elevated utility drawers)\n  - `surface-container-highest`: `#383838` (Divider lines, inactive pill boundaries, tooltips)\n- **Content Contrast**:\n  - High Emphasis: `#F1F1F1`\n  - Medium Emphasis: `#AAAAAA`\n  - Disabled / Structural: `#717171`\n\n## Typography\n\nTypography balances readability in high-density tables with industrial legibility in telemetry bars.\n\n- **Primary Canvas (`Roboto Flex`)**: Powers general product UI, headlines, metric cards, and layout descriptions. Utilizes standard optical sizing to preserve legibility in dark mode across all weights.\n- **Technical & Utility (`Inter`)**: Applied across micro-copy, chips, video timestamp badges, FFmpeg transcode flags, and data grid column keys. Inter\u2019s tall x-height and distinct numerals prevent ambiguous readings during live telemetry streaming.\n- **Numbers & Metrics**: Numerical representations inside operational badges and frame counters must display with tabular lining figures (`font-variant-numeric: tabular-nums`) to prevent layout jitter during realtime updates.\n\n## Layout & Spacing\n\nThe structural layout utilizes a persistent 12-column adaptive fluid grid for desktop workspaces, shifting to 8 columns on tablet viewports and 4 columns on mobile capture/review viewports.\n\n- **Desktop (>= 1280px)**: Collapsible rail sidebar (72px collapsed, 240px expanded), 16px gutter spacing, fixed horizontal work canvas margins of 24px. Multi-panel timeline and preview layouts maintain independent internal scroll viewports.\n- **Tablet (600px - 1279px)**: Icon-only rail navigation (72px), 16px margins, dynamic responsive cards collapsing from multi-row arrangements to stacked inspect panes.\n- **Mobile (< 600px)**: 16px outer margin, 8px grid gutters, pinned bottom utility actions for rapid editing, upload tracking, and Shorts format monitoring.\n- **Spacing Rhythm**: Based strictly on a 4px/8px incremental rhythm. Micro-telemetry chips utilize `space-xs` (4px) internal gaps, while high-density studio inspection forms utilize `space-sm` (8px) and `space-md` (12px) stack offsets.\n\n## Elevation & Depth\n\nIn alignment with Material Design 3 dark theme specifications, physical depth is expressed primarily through **tonal surface layering** rather than drop shadows. Elevating a component shifts its background to a lighter charcoal container token.\n\n- **Level 0 (Canvas Base)**: `#0F0F0F` \u2014 Default screen background, grid layout foundation.\n- **Level 1 (Docked Structural Panels)**: `#181818` with subtle top/edge ghost divider (`rgba(255, 255, 255, 0.08)` 1px border). Applied to lateral sidebars, studio headers, and inactive dock shelves.\n- **Level 2 (Cards & Active Modules)**: `#212121`. Used for Shorts detail cards, performance charts, and video matrix grids. Shadows are strictly ambient: `0 4px 12px rgba(0, 0, 0, 0.4)`.\n- **Level 3 (Floating Controls & Popovers)**: `#282828`. Filter menus, action sheets, contextual batch drawers. Shadow: `0 8px 24px rgba(0, 0, 0, 0.6)`.\n- **Level 4 (Dialogs & Critical Previews)**: `#313131`. Modal video inspectors, FFmpeg log viewer overlays, upload queues.\n- **Borders & Dividers**: High-density developer viewports require crisp structural definition. Use `rgba(255, 255, 255, 0.1)` for horizontal rules and card separators; avoid heavy saturated strokes.\n\n## Shapes\n\nThe design system implements a defined shape pairing: **full pill radii** for interactive filters, chips, telemetry pills, and action buttons, balanced by **standardized compact roundedness** for media cards and structural panels.\n\n- **Pills (`rounded-full` / `9999px`)**: Interactive filter chips, telemetry indicators, status pills, playhead buttons, and secondary badges.\n- **Cards and Dialogs (`rounded-xl` / `12px`)**: Shorts video cards, metric charts, contextual inspector blocks.\n- **Inputs and Code Blocks (`rounded-md` / `6px` to `8px`)**: High-density property textboxes, transcode terminal panels, and audio waveforms.\n- **Video Previews (`rounded-lg` / `8px`)**: Shorts 9:16 aspect previews preserve clean visual boundaries with precise 8px corner clipping.\n\n## Components\n\n### Buttons\n- **Primary Brand Button**: High-emphasis action (`Publish`, `Upload Shorts`). Fill: `#FF0033` (YouTube Red); Text: `#FFFFFF` (`label-lg`); Shape: Pill (`9999px`). Hover state: `#EA3323` with 8% white overlay.\n- **Secondary Studio Button**: Fill: `rgba(255, 255, 255, 0.1)`; Text: `#F1F1F1`; Hover: `rgba(255, 255, 255, 0.2)`; Shape: Pill.\n- **Subtle / Text Button**: Transparent background; Text: `#3EA6FF` (Secondary Blue); Hover: `rgba(62, 166, 255, 0.08)`.\n\n### Chips & Telemetry Badges\n- **Studio Filter Chips**: Pill contour. Dormant: `#212121` surface, border `rgba(255, 255, 255, 0.12)`, text `#F1F1F1`. Selected: `#FFFFFF` fill, `#0F0F0F` text.\n- **FFmpeg Status Badge**: Height: 20px; Pill shape; Padding: `0 8px`; Background: `rgba(43, 166, 64, 0.15)`; Border: `1px solid rgba(43, 166, 64, 0.4)`; Text: `#2BA640` (`telemetry-code`). Features a 6px pulsating dot for active encoding pipelines.\n- **Gemini / AI Telemetry Badge**: Background: `rgba(62, 166, 255, 0.15)`; Border: `1px solid rgba(62, 166, 255, 0.3)`; Text: `#3EA6FF`; Icon: 12px sparkle indicator.\n- **Pipeline Metric Badge (Ssemble/Render)**: Background: `rgba(163, 112, 247, 0.15)`; Border: `1px solid rgba(163, 112, 247, 0.3)`; Text: `#A370F7`.\n\n### Cards & Media Items\n- **Shorts Grid Item**: Surface `#212121` with an inner 9:16 aspect ratio thumbnail preview container. Rounded to 8px. Top-right duration chip with `rgba(0, 0, 0, 0.8)` backdrop. Metadata footer below thumbnail displays high-emphasis title (`title-md`), view count metrics, transcode completion indicator, and a tertiary quick-action trigger menu.\n\n### Input Fields & Controls\n- **Studio Text Inputs**: Background: `#181818`; Border: `1px solid rgba(255, 255, 255, 0.2)`; Corner radius: 6px; Active state: `2px solid #3EA6FF` border.\n- **Checkboxes & Radios**: Unselected: `rgba(255, 255, 255, 0.5)` stroke; Selected: `#3EA6FF` fill with pure `#FFFFFF` icon check mark.\n\n### Transcode & Processing Progress\n- Continuous progress bars maintain a track background of `#383838` with a 4px track height. Processing state is filled with `#3EA6FF`; finalized video completion transitions fill to `#2BA640`. Error states flash `#FF0033`.",
+        "colorVariant": "FIDELITY",
+        "overridePrimaryColor": "#ff0033",
+        "overrideSecondaryColor": "#3ea6ff",
+        "overrideTertiaryColor": "#2ba640",
+        "overrideNeutralColor": "#0f0f0f",
+        "spacingScale": 2,
+        "typography": {
+          "headline-lg": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "32px",
+            "fontWeight": "600",
+            "lineHeight": "40px",
+            "letterSpacing": "0px"
+          },
+          "label-lg": {
+            "fontFamily": "Inter",
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "lineHeight": "20px",
+            "letterSpacing": "0.1px"
+          },
+          "body-lg": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "letterSpacing": "0.5px"
+          },
+          "telemetry-code": {
+            "fontFamily": "Inter",
+            "fontSize": "11px",
+            "fontWeight": "600",
+            "lineHeight": "14px",
+            "letterSpacing": "0.6px"
+          },
+          "headline-lg-mobile": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "26px",
+            "fontWeight": "600",
+            "lineHeight": "32px",
+            "letterSpacing": "0px"
+          },
+          "display-lg": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "56px",
+            "fontWeight": "700",
+            "lineHeight": "64px",
+            "letterSpacing": "-0.25px"
+          },
+          "body-sm": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "lineHeight": "16px",
+            "letterSpacing": "0.4px"
+          },
+          "label-sm": {
+            "fontFamily": "Inter",
+            "fontSize": "11px",
+            "fontWeight": "600",
+            "lineHeight": "16px",
+            "letterSpacing": "0.5px"
+          },
+          "body-md": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "20px",
+            "letterSpacing": "0.25px"
+          },
+          "label-md": {
+            "fontFamily": "Inter",
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "lineHeight": "16px",
+            "letterSpacing": "0.5px"
+          },
+          "headline-md": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "22px",
+            "fontWeight": "600",
+            "lineHeight": "28px",
+            "letterSpacing": "0px"
+          },
+          "headline-sm": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "lineHeight": "24px",
+            "letterSpacing": "0.1px"
+          },
+          "title-md": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "lineHeight": "24px",
+            "letterSpacing": "0.15px"
+          }
+        },
+        "spacing": {
+          "gutter-mobile": "0.5rem",
+          "space-xs": "0.25rem",
+          "margin-mobile": "1rem",
+          "margin": "1.5rem",
+          "space-lg": "1rem",
+          "space-xl": "1.5rem",
+          "space-md": "0.75rem",
+          "space-sm": "0.5rem",
+          "gutter": "1rem"
+        },
+        "headlineFontFamily": "Roboto Flex",
+        "bodyFontFamily": "Roboto Flex",
+        "labelFontFamily": "Inter"
+      }
+    },
+    "version": "1"
+  }
+}

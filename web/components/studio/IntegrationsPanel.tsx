@@ -129,7 +129,7 @@ export function IntegrationsPanel() {
               {hasSecret ? 'Replace client_secret.json' : 'Upload client_secret.json'}
               <input
                 type="file"
-                accept=".json"
+                accept=".json,application/json,text/plain,*/*"
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                 onChange={handleFileUpload}
                 disabled={isUploadingFile}

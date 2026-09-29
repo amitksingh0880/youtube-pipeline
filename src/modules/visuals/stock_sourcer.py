@@ -63,9 +63,10 @@ class StockSourcer:
                 if v.get("duration", 0) < min_duration:
                     continue
                 files = v.get("video_files", [])
-                hd_files = [f for f in files if f.get("height", 0) >= 720 or f.get("width", 0) >= 720]
-                if hd_files:
-                    return hd_files[0]["link"]
+                # Prefer SD files to reduce memory on free-tier hosting
+                sd_files = [f for f in files if 360 <= f.get("height", 0) <= 720 or 360 <= f.get("width", 0) <= 720]
+                if sd_files:
+                    return sd_files[0]["link"]
                 elif files:
                     return files[0]["link"]
             return None
@@ -174,7 +175,7 @@ class StockSourcer:
         clean_prompt = prompt.replace("\n", " ").strip()
         encoded_prompt = urllib.parse.quote(clean_prompt)
         seed_param = seed if seed is not None else 42
-        url = f"{POLLINATIONS_BASE_URL}/{encoded_prompt}?width=720&height=1280&nologo=true&seed={seed_param}"
+        url = f"{POLLINATIONS_BASE_URL}/{encoded_prompt}?width=540&height=960&nologo=true&seed={seed_param}"
 
         try:
             resp = requests.get(url, timeout=12)
@@ -192,7 +193,7 @@ class StockSourcer:
         resp = requests.get(url, headers=headers, stream=True, timeout=30)
         resp.raise_for_status()
         with open(output_path, "wb") as f:
-            for chunk in resp.iter_content(chunk_size=1024 * 1024):
+            for chunk in resp.iter_content(chunk_size=65536):
                 if chunk:
                     f.write(chunk)
         return output_path
@@ -204,8 +205,8 @@ class StockSourcer:
         self,
         output_path: str,
         duration: float,
-        width: int = 1080,
-        height: int = 1920,
+        width: int = 720,
+        height: int = 1280,
         theme_index: int = 0,
     ) -> str:
         """
@@ -223,14 +224,14 @@ class StockSourcer:
         ]
         base, acc1, acc2 = palettes[theme_index % len(palettes)]
 
-        # Soft glowing ambient light fields with subtle vignette
+        # Soft glowing ambient light fields with subtle vignette (low-memory blur)
         vf = (
             f"color=c={base}:s={width}x{height}:d={duration},"
             f"drawbox=x=0:y=0:w={width}:h={height//2}:c={acc1}@0.65:t=fill,"
-            f"drawbox=x=150:y=400:w=780:h=780:c={acc2}@0.45:t=fill,"
-            f"boxblur=luma_radius=120:luma_power=3,"
+            f"drawbox=x=100:y=260:w=520:h=520:c={acc2}@0.45:t=fill,"
+            f"boxblur=luma_radius=40:luma_power=2,"
             f"vignette=PI/6,"
-            f"fps=30"
+            f"fps=24"
         )
         cmd = [
             "ffmpeg",
@@ -239,7 +240,8 @@ class StockSourcer:
             "-i", vf,
             "-t", str(duration),
             "-c:v", "libx264",
-            "-preset", "fast",
+            "-preset", "ultrafast",
+            "-threads", "1",
             "-pix_fmt", "yuv420p",
             str(output_path),
         ]

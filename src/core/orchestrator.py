@@ -7,6 +7,7 @@ Dual Assembly (Local Studio / Ssemble AI / Ssemble Clip) -> Altered Media YouTub
 """
 
 import os
+import gc
 import uuid
 import tempfile
 import logging
@@ -173,6 +174,7 @@ class ShortsOrchestrator:
             # Master audio with loudness normalization (-14 LUFS)
             master_audio = str(work_dir / "master_audio.mp3")
             self.audio_master.normalize_loudness(raw_audio, master_audio, target_lufs=-14.0)
+            gc.collect()  # Free TTS memory before visual processing
 
             # Step 5: Source Visual B-roll Footage
             update_progress("Sourcing HD stock footage & generating visuals...", 65)
@@ -181,6 +183,7 @@ class ShortsOrchestrator:
                 work_dir=work_dir,
                 niche=niche,
             )
+            gc.collect()  # Free download buffers before FFmpeg reframing
 
             # Step 6: Dynamic Motion FX (Ken Burns & 9:16 Reframe)
             update_progress("Applying 9:16 reframe & Ken Burns motion...", 75)
@@ -195,6 +198,12 @@ class ShortsOrchestrator:
                     beat_index=i,
                 )
                 reframed_clips.append(out_clip)
+                # Delete raw source file to free disk/page-cache memory
+                try:
+                    os.remove(clip_p)
+                except OSError:
+                    pass
+                gc.collect()  # Free per-beat FFmpeg memory
 
             # Step 7: Video Assembly
             highlight_color = niche.get("captions", {}).get("highlight_color", "&H0000FFFF&")

@@ -72,7 +72,7 @@ class LocalAssembler:
             "-vf", f"ass='{escaped_ass}'",
             "-map", "0:v:0",
             "-map", "1:a:0",
-            "-shortest",
+            
             "-c:v", "libx264",
             "-preset", "fast",
             "-crf", "18",

@@ -50,9 +50,10 @@ Your scripts must strictly follow the 2026 YouTube Shorts Retention Architecture
    - Reveal surprising facts, historical turns, or psychological insights in rapid, punchy sentences.
    - Each beat must pair with a specific, concrete 2-4 word visual query for stock footage.
 
-4. Act 4: The Climax & Infinite Loop Anchor (40-55s, Final Beat)
-   - Deliver the payoff or conclusion.
-   - The very last words of the script MUST syntactically and rhythmically connect directly back to the first word of Beat 1, creating an infinite watch loop.
+4. Act 4: The Climax & Resolution (40-55s, Final Beat)
+     - Deliver a deeply satisfying payoff or conclusion to the story.
+     - The video MUST feel complete. Do NOT leave cliffhangers, and do NOT write Part 2.
+     - The story of the video must completely finish in this same video.
 
 Tone: Authoritative, intriguing, fast-paced, conversational, completely free of fluff."""
 

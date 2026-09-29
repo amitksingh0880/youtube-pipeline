@@ -57,7 +57,9 @@ class MotionFX:
                 "-vf", vf,
                 "-an",
                 "-c:v", "libx264",
-                "-preset", "fast",
+                "-preset", "ultrafast",
+                "-threads", "1",
+                "-max_muxing_queue_size", "1024",
                 "-pix_fmt", "yuv420p",
                 str(output_video),
             ]
@@ -76,7 +78,9 @@ class MotionFX:
                 "-vf", base_filter,
                 "-an",  # Strip original video audio so narration is clean
                 "-c:v", "libx264",
-                "-preset", "fast",
+                "-preset", "ultrafast",
+                "-threads", "1",
+                "-max_muxing_queue_size", "1024",
                 "-r", str(cls.FPS),
                 "-pix_fmt", "yuv420p",
                 str(output_video),

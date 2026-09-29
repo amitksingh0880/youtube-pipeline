@@ -74,8 +74,10 @@ class LocalAssembler:
             "-map", "1:a:0",
             "-shortest",
             "-c:v", "libx264",
-            "-preset", "fast",
-            "-crf", "18",  # High visual quality
+            "-preset", "ultrafast",
+            "-crf", "23",
+            "-threads", "1",
+            "-max_muxing_queue_size", "1024",
             "-pix_fmt", "yuv420p",
             "-c:a", "aac",
             "-b:a", "192k",

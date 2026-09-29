@@ -13,6 +13,7 @@ import { NicheSelector } from "@/components/studio/NicheSelector";
 import { PipelineModeCards } from "@/components/studio/PipelineModeCards";
 import { StudioPreviewPlayer } from "@/components/studio/StudioPreviewPlayer";
 import { IntegrationsPanel } from "@/components/studio/IntegrationsPanel";
+import { PipelineLogs } from "@/components/studio/PipelineLogs";
 
 export default function StudioGeneratorPage() {
   const [selectedNiche, setSelectedNiche] = useState("dark_history");
@@ -229,6 +230,8 @@ export default function StudioGeneratorPage() {
             onUpload={handleUpload}
             isUploading={isUploading}
           />
+          {/* TERMINAL LOGS */}
+          <PipelineLogs isGenerating={isGenerating} />
         </div>
       </div>
     </div>

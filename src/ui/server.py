@@ -24,6 +24,30 @@ from src.modules.research.topic_discovery import TopicDiscovery
 from src.modules.assembly.ssemble_bridge import SsembleBridge
 from src.modules.publishing.youtube_uploader import YouTubeUploader
 
+# --- Pipeline Logging ---
+GLOBAL_PIPELINE_LOGS: List[Dict[str, str]] = []
+
+class MemoryLogHandler(logging.Handler):
+    def emit(self, record):
+        try:
+            msg = self.format(record)
+            log_entry = {
+                "timestamp": time.strftime("%H:%M:%S"),
+                "level": record.levelname,
+                "message": msg
+            }
+            GLOBAL_PIPELINE_LOGS.append(log_entry)
+            if len(GLOBAL_PIPELINE_LOGS) > 1000:
+                GLOBAL_PIPELINE_LOGS.pop(0)
+        except Exception:
+            self.handleError(record)
+
+memory_handler = MemoryLogHandler()
+memory_handler.setFormatter(logging.Formatter("%(message)s"))
+# Attach to root logger to capture everything (Gemini API, Orchestrator, etc.)
+logging.getLogger().addHandler(memory_handler)
+logging.getLogger().setLevel(logging.INFO)
+
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="YouTube Shorts Studio API", version="2.0.0")
@@ -246,6 +270,9 @@ def get_short_details(session_id: str):
 def get_job_progress(job_id: str):
     return JOB_PROGRESS.get(job_id, {"status": "idle", "percent": 0, "message": "No active job"})
 
+@app.get("/api/logs")
+def get_pipeline_logs():
+    return {"logs": GLOBAL_PIPELINE_LOGS}
 
 def _async_generate_job(job_id: str, req: GenerateRequest):
     def on_prog(msg: str, pct: int):
@@ -256,6 +283,7 @@ def _async_generate_job(job_id: str, req: GenerateRequest):
         }
 
     try:
+        logger.info(f"Starting pipeline generation for mode '{req.mode}'")
         res = orchestrator.run_pipeline(
             niche_id=req.niche_id,
             mode=req.mode,
@@ -265,12 +293,13 @@ def _async_generate_job(job_id: str, req: GenerateRequest):
             privacy_status=req.privacy_status,
             progress_callback=on_prog,
         )
+        logger.info("Pipeline generation successfully completed!")
         JOB_PROGRESS[job_id]["result"] = res
         JOB_PROGRESS[job_id]["status"] = "completed"
         JOB_PROGRESS[job_id]["percent"] = 100
         JOB_PROGRESS[job_id]["message"] = "Short generated successfully!"
     except Exception as e:
-        logger.exception("Pipeline generation failed")
+        logger.exception("Pipeline generation failed at step")
         JOB_PROGRESS[job_id] = {
             "status": "failed",
             "percent": 0,
@@ -278,10 +307,10 @@ def _async_generate_job(job_id: str, req: GenerateRequest):
             "error": str(e),
         }
 
-
 @app.post("/api/generate")
 def trigger_generation(req: GenerateRequest, background_tasks: BackgroundTasks):
     import uuid
+    GLOBAL_PIPELINE_LOGS.clear()
     job_id = uuid.uuid4().hex[:8]
     JOB_PROGRESS[job_id] = {
         "status": "starting",
@@ -296,6 +325,7 @@ def trigger_generation(req: GenerateRequest, background_tasks: BackgroundTasks):
 def clip_youtube_video(req: SsembleClipRequest, background_tasks: BackgroundTasks):
     """Clips a long-form YouTube video using Ssemble AI clipping engine."""
     import uuid
+    GLOBAL_PIPELINE_LOGS.clear()
     job_id = uuid.uuid4().hex[:8]
     
     def _run_clip():

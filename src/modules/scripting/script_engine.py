@@ -100,7 +100,7 @@ Requirements:
 - Provide concrete, cinematic 2-4 word visual queries for B-roll footage (these can stay in English).
 - Output ONLY valid JSON conforming to the requested schema."""
 
-        candidate_models = [self.model, "gemini-flash-latest", "gemini-3.5-flash", "gemini-3.7-flash"]
+        candidate_models = [self.model, "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
         unique_models = list(dict.fromkeys([m for m in candidate_models if m]))
 
         last_error = None
@@ -114,6 +114,7 @@ Requirements:
                         response_mime_type="application/json",
                         response_schema=YouTubeShortScript,
                         temperature=0.8,
+                        automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True)
                     ),
                 )
                 script = YouTubeShortScript.model_validate_json(response.text)

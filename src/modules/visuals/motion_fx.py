@@ -11,9 +11,9 @@ from typing import Optional
 
 
 class MotionFX:
-    WIDTH = 720
-    HEIGHT = 1280
-    FPS = 24
+    WIDTH = 1080
+    HEIGHT = 1920
+    FPS = 30
 
     @classmethod
     def reframe_and_animate(
@@ -25,7 +25,7 @@ class MotionFX:
         beat_index: int = 0,
     ) -> str:
         """
-        Reframes any media (video or image) to 720x1280 vertical Short format.
+        Reframes any media (video or image) to 1080x1920 vertical Short format.
         - If image: scales up, center-crops to 9:16, and applies a lightweight slow pan.
         - If video: scales, center-crops to 9:16, loops if shorter than target_duration.
         """
@@ -56,9 +56,9 @@ class MotionFX:
                 "-vf", vf,
                 "-an",
                 "-c:v", "libx264",
-                "-preset", "ultrafast",
+                "-preset", "fast",
                 "-threads", "1",
-                "-max_muxing_queue_size", "512",
+                "-max_muxing_queue_size", "1024",
                 "-pix_fmt", "yuv420p",
                 str(output_video),
             ]
@@ -77,9 +77,9 @@ class MotionFX:
                 "-vf", base_filter,
                 "-an",
                 "-c:v", "libx264",
-                "-preset", "ultrafast",
+                "-preset", "fast",
                 "-threads", "1",
-                "-max_muxing_queue_size", "512",
+                "-max_muxing_queue_size", "1024",
                 "-r", str(cls.FPS),
                 "-pix_fmt", "yuv420p",
                 str(output_video),

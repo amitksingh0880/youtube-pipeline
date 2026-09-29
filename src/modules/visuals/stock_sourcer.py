@@ -63,10 +63,9 @@ class StockSourcer:
                 if v.get("duration", 0) < min_duration:
                     continue
                 files = v.get("video_files", [])
-                # Prefer SD files to reduce memory on free-tier hosting
-                sd_files = [f for f in files if 360 <= f.get("height", 0) <= 720 or 360 <= f.get("width", 0) <= 720]
-                if sd_files:
-                    return sd_files[0]["link"]
+                hd_files = [f for f in files if f.get("height", 0) >= 1080 or f.get("width", 0) >= 1080]
+                if hd_files:
+                    return hd_files[0]["link"]
                 elif files:
                     return files[0]["link"]
             return None
@@ -175,7 +174,7 @@ class StockSourcer:
         clean_prompt = prompt.replace("\n", " ").strip()
         encoded_prompt = urllib.parse.quote(clean_prompt)
         seed_param = seed if seed is not None else 42
-        url = f"{POLLINATIONS_BASE_URL}/{encoded_prompt}?width=540&height=960&nologo=true&seed={seed_param}"
+        url = f"{POLLINATIONS_BASE_URL}/{encoded_prompt}?width=1080&height=1920&nologo=true&seed={seed_param}"
 
         try:
             resp = requests.get(url, timeout=12)
@@ -205,8 +204,8 @@ class StockSourcer:
         self,
         output_path: str,
         duration: float,
-        width: int = 720,
-        height: int = 1280,
+        width: int = 1080,
+        height: int = 1920,
         theme_index: int = 0,
     ) -> str:
         """

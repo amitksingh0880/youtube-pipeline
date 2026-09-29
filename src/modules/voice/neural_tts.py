@@ -95,6 +95,7 @@ class NeuralTTS:
         work_dir: Path,
         voice: Optional[str] = None,
         rate: Optional[str] = None,
+        pitch: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         """
         Synthesizes each beat separately to enable perfect visual sync per beat.
@@ -103,7 +104,7 @@ class NeuralTTS:
         results = []
         for i, beat in enumerate(beats):
             out_file = str(work_dir / f"beat_{i:02d}.mp3")
-            meta = self.synthesize(beat.text, out_file, voice=voice, rate=rate)
+            meta = self.synthesize(beat.text, out_file, voice=voice, rate=rate, pitch=pitch)
             meta["beat_number"] = getattr(beat, "beat_number", i + 1)
             meta["text"] = beat.text
             meta["visual_query"] = getattr(beat, "visual_query", "")

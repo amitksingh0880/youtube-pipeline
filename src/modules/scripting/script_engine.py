@@ -6,6 +6,7 @@ Enforces the 2026 YouTube Shorts 4-act viral retention framework.
 
 import json
 import logging
+import time
 from typing import List, Optional
 from pydantic import BaseModel, Field
 from google import genai
@@ -100,7 +101,7 @@ Requirements:
 - Provide concrete, cinematic 2-4 word visual queries for B-roll footage (these can stay in English).
 - Output ONLY valid JSON conforming to the requested schema."""
 
-        candidate_models = [self.model, "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+        candidate_models = [self.model, "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-3.8-flash"]
         unique_models = list(dict.fromkeys([m for m in candidate_models if m]))
 
         last_error = None
@@ -120,7 +121,9 @@ Requirements:
                 script = YouTubeShortScript.model_validate_json(response.text)
                 return script
             except Exception as e:
+                logger.warning(f"Model {target_model} failed: {e}. Retrying with next candidate...")
                 last_error = e
+                time.sleep(2)
                 continue
 
         logger.warning(f"All Gemini candidate models failed ({last_error}). Falling back to offline mock script.")
